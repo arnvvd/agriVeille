@@ -1,15 +1,15 @@
 <template>
-    <main class="main">
-        <p>Hello World</p>
-    </main>
+    <div class="home">
+        <h1>{{title}}</h1>
+    </div>
 </template>
 
 <script>
+
 export default {
-    name: 'home',
     data () {
         return {
-          msg: 'veiiiillle'
+          title: 'Hello Home'
         }
     },
     mounted() {
@@ -40,12 +40,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
-
-@import "~styles/main.scss";
-
-canvas {
-    width: 100%;
-    height: 100%;
-}
-</style>
+<style lang="scss"></style>
