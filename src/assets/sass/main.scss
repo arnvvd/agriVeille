@@ -1,3 +1,57 @@
-body {
-    background-color: green;
+/********************/
+/****** Header ******/
+/********************/
+
+/*!
+Theme Name: Veille agriculture connectée
+Theme URI: http://example.com
+Author: Nikita Skargovskii & Arnaud Pinot
+Author URI:
+Version: 1.0
+*/
+
+/*********************/
+/****** Imports ******/
+/*********************/
+// NOTE : Files are globally imported thanks to import-glob-loader (https://www.npmjs.com/package/import-glob-loader)
+
+
+/* # Config */
+@import '_config/variables';
+
+/* # Sass plugins */
+@import '_plugins/normalize/normalize'; //Normalize
+@import '_plugins/sass-mq/_mq'; //MQ
+
+/* # Config */
+@import '_config/mixins';
+@import '_config/fonts';
+@import '_config/fonts-mixins';
+
+/* # Project */
+@import "_project/00_base/base";
+@import "_project/00_base/resetForm";
+@import "_project/00_base/utilsClasses";
+
+@import "_project/01_components/buttons";
+@import "_project/01_components/links";
+
+@import "_project/02_modules/nav";
+
+@import "_project/03_layout/header";
+@import "_project/03_layout/footer";
+
+
+
+
+.transition-page-enter-active {
+  transition: all .3s ease .4s;
+}
+.transition-page-leave-active {
+  transition: all .4s ease;
+}
+.transition-page-enter, .transition-page-leave-to
+  /* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }

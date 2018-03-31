@@ -2,7 +2,7 @@
   "name": "veille",
   "version": "1.0.0",
   "description": "veille",
-  "author": "nikitaskar <n.skargovskii@gmail.com>",
+  "author": "Nikita Skargovskii & Arnaud Pinot",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -10,10 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "import-glob-loader": "^1.1.0",
-    "node-sass": "^4.8.3",
     "pixi.js": "^4.7.1",
-    "sass-loader": "^6.0.7",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -35,6 +32,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "node-notifier": "^5.1.2",
+    "node-sass": "^4.8.3",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
     "portfinder": "^1.0.13",
@@ -42,6 +40,7 @@
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
     "rimraf": "^2.6.0",
+    "sass-loader": "^6.0.7",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
