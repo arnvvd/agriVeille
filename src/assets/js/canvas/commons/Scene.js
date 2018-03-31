@@ -38,7 +38,6 @@ export default class Scene {
     resize( _width, _height ) {
         this.width = _width;
         this.height = _height;
-        console.log(this.height);
 
         this.renderer.view.style.width = `${this.width}px`;
         this.renderer.view.style.height = `${this.height}px`;
