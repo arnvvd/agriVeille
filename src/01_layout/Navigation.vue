@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav">
+  <nav class="nav nav--main">
         <ul>
             <li>
                 <router-link to="/">Home</router-link>
@@ -8,3 +8,14 @@
         </ul>
     </nav>
 </template>
+
+<style lang="scss">
+    .nav {
+        &--main {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+</style>

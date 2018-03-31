@@ -1,10 +1,12 @@
 <template>
     <div class="home">
         <h1>{{title}}</h1>
+        <home-canvas></home-canvas>
     </div>
 </template>
 
 <script>
+import Canvas from '@/00_components/Canvas.vue';
 
 export default {
     data () {
@@ -12,32 +14,18 @@ export default {
           title: 'Hello Home'
         }
     },
-    mounted() {
-        this.setListeners()
-        this.setUpScene()
+    components: {
+        'homeCanvas': Canvas
     },
-    methods: {
-        setUpScene() {
-            this.pixiApp = new PIXI.Application({
-              width: window.innerWidth,
-              height: window.innerHeight,
-              antialias: true,    
-              transparent: true,
-            })
-            this.pixiApp.renderer.autoResize = true;
-            document.body.appendChild(this.pixiApp.view);
-        },
-
-        onResize() {
-          this.pixiApp.renderer.resize(window.innerWidth, window.innerHeight);
-        },
-
-        setListeners() {
-          window.addEventListener('resize', this.onResize)
-        }
-    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss"></style>
+<style lang="scss">
+    .home {
+        position: relative;
+        padding: 4rem 0;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+</style>

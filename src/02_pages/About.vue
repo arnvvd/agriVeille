@@ -16,4 +16,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss"></style>
+<style lang="scss">
+    .about {
+        padding: 4rem 0;
+    }
+</style>
