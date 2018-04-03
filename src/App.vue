@@ -10,7 +10,7 @@
     <navigation></navigation>
 
     <!-- Router-->
-    <transition name="transition-page">
+    <transition :name="transitionName">
         <router-view></router-view>
     </transition> 
     
@@ -35,8 +35,13 @@
     import { mapActions, mapGetters } from 'vuex';
     
 
-
     export default {
+        data () {
+            return {
+                transitionName: 'transition-page'
+            }
+        },
+
         components: {
             'navigation': Navigation,
             'loader': Loader
@@ -84,6 +89,17 @@
 
         beforeDestroy() {
             this.unbindEvents();
+        },
+
+
+        watch: {
+            '$route' (to, from) {
+                if (to.meta.transition) {
+                    this.transitionName = to.meta.transition
+                } else {
+                    this.transitionName = 'transition-page'
+                }  
+            }
         }
     }
 </script>
