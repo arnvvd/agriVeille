@@ -35,10 +35,10 @@
 /****** Loader ******/
 /*********************/
 .transition-loader-leave-active {
-    transition: all .6s ease;
+    transition: transform 1s ease, opacity .6s ease;
 }
 .transition-loader-enter, .transition-loader-leave-to {
-    transform: scale(1.2);
+    transform: scale(1.4);
     opacity: 0;
 }
 

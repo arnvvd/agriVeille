@@ -2,8 +2,8 @@
     <nav class="nav nav--main">
         <ul>
             <li>
-                <router-link to="/">Home</router-link>
-                <router-link to="/about">About</router-link>
+                <router-link :to="{name: 'home'}">Home</router-link>
+                <router-link :to="{name: 'about'}">About</router-link>
             </li>
         </ul>
     </nav>
