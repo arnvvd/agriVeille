@@ -32,6 +32,7 @@ Version: 1.0
 @import "_project/00_base/base";
 @import "_project/00_base/resetForm";
 @import "_project/00_base/utilsClasses";
+@import "_project/00_base/transitions";
 
 @import "_project/01_components/buttons";
 @import "_project/01_components/links";
@@ -40,20 +41,3 @@ Version: 1.0
 
 @import "_project/03_layout/header";
 @import "_project/03_layout/footer";
-
-
-
-/*********************/
-/****** TO DELETE ******/
-/*********************/
-.transition-page-enter-active {
-  transition: all .3s ease .4s;
-}
-.transition-page-leave-active {
-  transition: all .4s ease;
-}
-.transition-page-enter, .transition-page-leave-to
-  /* .slide-fade-leave-active for <2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
-}

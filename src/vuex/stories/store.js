@@ -8,21 +8,23 @@ import gettersList from './getters';
 import actionList from './actions';
 
 
-
 /* State */
 const state = {
-    count: 0
+    datasFetched: false,
+    stories: []
 };
-
 
 
 /* Mutations */
 // Functions to mute our state
 const mutations = {
-    // we can use the ES2015 computed property name feature
-    // to use a constant as the function name
-    [ types.COUNTER_INCREMENT ] (state) {
-        state.count++;
+
+    [ types.SET_STORIES ] (state, stories) {
+        state.stories = stories;
+    },
+
+    [ types.SET_DATAS_FETCHED ] (state) {
+        state.datasFetched = true;
     }
 };
 

@@ -1,0 +1,26 @@
+/*********************/
+/****** Page Default ******/
+/*********************/
+.transition-page-enter-active {
+    transition: all .3s ease .4s;
+}
+.transition-page-leave-active {
+    transition: all .4s ease;
+}
+.transition-page-enter, .transition-page-leave-to
+    /* .slide-fade-leave-active for <2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+
+/*********************/
+/****** Loader ******/
+/*********************/
+.transition-loader-leave-active {
+    transition: all .6s ease;
+}
+.transition-loader-enter, .transition-loader-leave-to {
+    transform: scale(1.2);
+    opacity: 0;
+}

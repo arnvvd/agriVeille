@@ -7,7 +7,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 /*Import stores*/
-import exampleStore from './example/store';
+import storiesStore from './stories/store';
 
 /*Debug if Env = production*/
 const debug = process.env.NODE_ENV !== 'production';
@@ -16,7 +16,7 @@ const debug = process.env.NODE_ENV !== 'production';
 export default new Vuex.Store({
     /*Modules we need*/
     modules: {
-        exampleStore
+        storiesStore
     },
     strict: debug,
     middlewares: debug

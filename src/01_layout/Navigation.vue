@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav nav--main">
+    <nav class="nav nav--main">
         <ul>
             <li>
                 <router-link to="/">Home</router-link>
