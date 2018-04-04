@@ -8,6 +8,7 @@ import * as PIXI from 'pixi.js'
 import moment from 'moment'
 Vue.config.productionTip = false
 
+// Fiter date
 Vue.filter('formatDate', (value) => {
     if (value) {
         return moment(value,'DD/MM/YYYY').format('LL');
