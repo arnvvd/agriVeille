@@ -7,7 +7,7 @@
     </transition>
 
     <!-- Main Navigation-->
-    <navigation></navigation>
+    <navigation :stories="getStories"></navigation>
 
     <!-- Router-->
     <transition :name="transitionName">
@@ -50,7 +50,8 @@
 
         computed: {
             ...mapGetters([
-                'getDatasFetched'
+                'getDatasFetched',
+                'getStories'
             ])
         },
 
