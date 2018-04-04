@@ -11,7 +11,7 @@
 
     <!-- Router-->
     <transition :name="transitionName">
-        <router-view></router-view>
+        <router-view :key="$route.params.storySlug"></router-view>
     </transition> 
     
   </main>

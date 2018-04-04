@@ -18,7 +18,7 @@ const routes = [
         } 
     },
     { 
-        path: '/article/:storyTitle', 
+        path: '/article/:storySlug', 
         name: 'article',
         component: Article,
         meta: {} 
