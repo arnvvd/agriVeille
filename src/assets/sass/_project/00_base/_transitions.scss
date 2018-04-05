@@ -35,10 +35,9 @@
 /****** Loader ******/
 /*********************/
 .transition-loader-leave-active {
-    transition: transform 1s ease, opacity .6s ease;
+    transition: height .8s $easeOutCubic
 }
 .transition-loader-enter, .transition-loader-leave-to {
-    transform: scale(1.4);
-    opacity: 0;
+    height: 0!important
 }
 

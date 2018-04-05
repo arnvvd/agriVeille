@@ -17,6 +17,12 @@ export default {
     components: {
         'homeCanvas': Canvas
     },
+    methods: {
+
+    },
+    mounted(){
+        
+    } 
 }
 </script>
 
