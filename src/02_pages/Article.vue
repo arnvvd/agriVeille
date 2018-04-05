@@ -22,7 +22,7 @@
             }
         },
         mounted() {
-            console.log(this.$route.params.storySlug)
+            console.log(this.$route)
         }
     }
 </script>

@@ -8,18 +8,26 @@
     import {Tweenmax} from 'gsap';
     import Emitter from '@/core/eventemitter.js'; 
     import {
-        WINDOW_RESIZE
+        WINDOW_RESIZE,
+        CANVAS_CLICK
     } from '@/core/messages.js';
 
 
-    export default {
+    /* Vue Imports */
+    import router from '@/router'
 
+    export default {
     	data() {
     		return {}
         },
 
         methods: {
             bindEvents() {
+
+                Emitter.on(CANVAS_CLICK, this.canvasClick = (args) => {
+                    router.push({ name: 'article', params: { storySlug: args.slug }})
+                });
+
                 Emitter.on(WINDOW_RESIZE, this.canvasResize = (args) => {
                     this.canvas.resize(args.width, args.height);
                 });
@@ -31,6 +39,7 @@
             },
 
             unbindEvents() {
+                Emitter.off(CANVAS_CLICK, this.canvasClick);
                 Emitter.off(WINDOW_RESIZE, this.canvasResize);
                 
                 if (this._bindedUpdate) {
@@ -73,6 +82,6 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        z-index: -1;
+        z-index: 0;
     } 
 </style>
