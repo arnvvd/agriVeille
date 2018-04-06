@@ -14,12 +14,14 @@ import Canvas from '@/00_components/Canvas.vue';
 import Onboarding from '@/01_layout/Onboarding.vue';
 
 /* Import Action STORE*/
-import { mapGetters } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
     data () {
         return {
-          title: 'Hello Home'
+          title: 'Hello Home',
+          mousewheelevt: (/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel",
+          isAnimated: false
         }
     },
     components: {
@@ -34,9 +36,39 @@ export default {
     methods: {
         bindEvents() {
             console.log('je bind les events')
+
+            if (!this._bindedScrollJack) {
+                this._bindedScrollJack = this.onScrollJack.bind(this);
+                if (document.attachEvent) {
+                    document.attachEvent(`on${this.mousewheelevt}`, this._bindedScrollJack)
+                } else if (document.addEventListener) {
+                    document.addEventListener(this.mousewheelevt, this._bindedScrollJack)
+                }
+            }
         },
         unbindEvents() {
             console.log('unbind les events')
+
+            if (this._bindedScrollJack) {
+                if (document.attachEvent) {
+                    document.detachEvent(`on${this.mousewheelevt}`, this._bindedScrollJack)
+                } else if (document.addEventListener) {
+                    document.removeEventListener(this.mousewheelevt, this._bindedScrollJack)
+                }
+                this._bindedScrollJack = null;
+            }
+        },
+        onScrollJack(e) {
+            const evt = window.event || e; //equalize event object
+            const delta = evt.detail ? evt.detail : (evt.wheelDelta / -120); //check for detail first so Opera uses that instead of wheelDelta
+            
+            if(delta > 4 && !this.isAnimated) {
+                this.$store.dispatch('setDigitalValue', 1)
+            } else if(delta < -4 && !this.isAnimated) {
+                this.$store.dispatch('setDigitalValue', -1)
+            }
+
+            e.preventDefault();
         }
     },
     mounted() {
@@ -44,10 +76,15 @@ export default {
         if (this.getIsOnboarded) {
             this.bindEvents();
         }
+    },
+    destroyed() {
+        if (this.getIsOnboarded) {
+            this.unbindEvents();
+        }
     },  
     watch: {
         getIsOnboarded : function(val) {
-            console.log(val)
+            console.log('tegr')
             if (val) {
                 this.bindEvents();
             }

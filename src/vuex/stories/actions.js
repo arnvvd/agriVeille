@@ -26,7 +26,17 @@ const actionsList = {
 
     setOnboarded: (store) => {
         store.commit(types.SET_ONBOARDED);
-    } 
+    }, 
+
+    setDigitalValue: (store, value) => {
+        const currentDigitalValue = store.state.digitalValue;
+        const maxValue = store.state.stories.length;
+        const newDigitaleValue = currentDigitalValue + value;
+
+        if (newDigitaleValue > 0 && newDigitaleValue < maxValue + 1) {
+            store.commit(types.SET_DIGITALVALUE, newDigitaleValue);
+        }
+    }
 };
 
 export default actionsList;

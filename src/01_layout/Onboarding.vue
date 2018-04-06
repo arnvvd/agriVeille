@@ -51,6 +51,7 @@ export default {
             max-width: 70rem;
             background-color: $white;
             padding: 4rem;
+            border-radius: .5rem
         } 
     } 
 
