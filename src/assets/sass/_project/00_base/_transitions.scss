@@ -30,14 +30,24 @@
 }
 
 
-
 /*********************/
 /****** Loader ******/
 /*********************/
 .transition-loader-leave-active {
-    transition: height .8s $easeOutCubic
+    transition: height .8s $easeCustom
 }
 .transition-loader-enter, .transition-loader-leave-to {
     height: 0!important
 }
 
+
+/*********************/
+/****** Onboarding ******/
+/*********************/
+
+.transition-onboarding-leave-active {
+    transition: all .3s ease .4s;
+}
+.transition-onboarding-enter, .transition-onboarding-leave-to {
+    opacity: 0;
+}

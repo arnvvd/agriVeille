@@ -2,11 +2,19 @@
     <div class="home">
         <h1>{{title}}</h1>
         <home-canvas></home-canvas>
+        <transition name="transition-onboarding">
+            <onboarding v-if="!getIsOnboarded"></onboarding>
+        </transition> 
     </div>
 </template>
 
+
 <script>
 import Canvas from '@/00_components/Canvas.vue';
+import Onboarding from '@/01_layout/Onboarding.vue';
+
+/* Import Action STORE*/
+import { mapGetters } from 'vuex';
 
 export default {
     data () {
@@ -15,14 +23,36 @@ export default {
         }
     },
     components: {
-        'homeCanvas': Canvas
+        'homeCanvas': Canvas,
+        Onboarding
+    },
+    computed: {
+        ...mapGetters([
+            'getIsOnboarded',
+        ])
     },
     methods: {
-
+        bindEvents() {
+            console.log('je bind les events')
+        },
+        unbindEvents() {
+            console.log('unbind les events')
+        }
     },
-    mounted(){
-        
-    } 
+    mounted() {
+        console.log(this.getIsOnboarded);
+        if (this.getIsOnboarded) {
+            this.bindEvents();
+        }
+    },  
+    watch: {
+        getIsOnboarded : function(val) {
+            console.log(val)
+            if (val) {
+                this.bindEvents();
+            }
+        } 
+    }
 }
 </script>
 

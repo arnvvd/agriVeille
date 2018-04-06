@@ -22,10 +22,7 @@
 
 <script>
 export default {
-  props: ['stories'],
-  mounted() {
-      console.log(this.stories);
-  }
+  props: ['stories']
 }
 </script>
 

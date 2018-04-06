@@ -22,7 +22,11 @@ const actionsList = {
             }, 2000);
         })
         .catch((err) => console.log(err));
-    }
+    },
+
+    setOnboarded: (store) => {
+        store.commit(types.SET_ONBOARDED);
+    } 
 };
 
 export default actionsList;

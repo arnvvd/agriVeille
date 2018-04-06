@@ -11,6 +11,7 @@ import actionList from './actions';
 /* State */
 const state = {
     datasFetched: false,
+    isOnboarded: false,
     stories: []
 };
 
@@ -25,6 +26,10 @@ const mutations = {
 
     [ types.SET_DATAS_FETCHED ] (state) {
         state.datasFetched = true;
+    },
+
+    [ types.SET_ONBOARDED ] (state) {
+        state.isOnboarded = true;
     }
 };
 
