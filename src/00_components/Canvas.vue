@@ -21,6 +21,8 @@
         methods: {
             bindEvents() {
                 Emitter.on(WINDOW_RESIZE, this.canvasResize = (args) => {
+                    this.canvas.width = args.width
+                    this.canvas.height = args.height
                     this.canvas.resize(args.width, args.height);
                 });
                 

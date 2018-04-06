@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import particles from 'pixi-particles'
 
 export default class Scene {
 
@@ -6,9 +7,9 @@ export default class Scene {
 
         this.width = _width;
         this.height = _height;
-
+        
         this.children = [];
-
+   
         this.stage = new PIXI.Container();
         this.renderer = new PIXI.WebGLRenderer( this.width, this.height, { transparent: true } );
     }
@@ -38,10 +39,14 @@ export default class Scene {
     resize( _width, _height ) {
         this.width = _width;
         this.height = _height;
+        console.log(this.width)
 
-        this.renderer.view.style.width = `${this.width}px`;
-        this.renderer.view.style.height = `${this.height}px`;
- 
+        // this.renderer.view.style.width = `${this.width}px`;
+        // this.renderer.view.style.height = `${this.height}px`;
+
+        this.renderer.view.width = this.width
+        this.renderer.view.height = this.height
+        this.renderer.resize(this.width, this.height)
         // this.renderer.view.style.width = Math.min(this.width, this.height) + 'px';
         // this.renderer.view.style.height = Math.min(this.width, this.height) + 'px';
     }
