@@ -3,6 +3,7 @@
 const gettersList = {
     getDatasFetched: state => state.datasFetched,
     getIsOnboarded: state => state.isOnboarded,
+    getIsAnimated: state => state.isAnimated,
     getDigitalValue: state => state.digitalValue,
     getStories: state => state.stories,
     getStoryBySlug: state => (slug) => {

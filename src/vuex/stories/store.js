@@ -12,6 +12,7 @@ import actionList from './actions';
 const state = {
     datasFetched: false,
     isOnboarded: false,
+    isAnimated: false,
     digitalValue: 1,
     stories: []
 };
@@ -35,6 +36,10 @@ const mutations = {
 
     [ types.SET_DIGITALVALUE ] (state, value) {
         state.digitalValue = value;
+    },
+
+    [ types.SET_ANIMATED] (state, value) {
+        state.isAnimated = value;
     }
 };
 

@@ -20,8 +20,7 @@ export default {
     data () {
         return {
           title: 'Hello Home',
-          mousewheelevt: (/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel",
-          isAnimated: false
+          mousewheelevt: (/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel"
         }
     },
     components: {
@@ -31,6 +30,7 @@ export default {
     computed: {
         ...mapGetters([
             'getIsOnboarded',
+            'getIsAnimated'
         ])
     },
     methods: {
@@ -61,10 +61,10 @@ export default {
         onScrollJack(e) {
             const evt = window.event || e; //equalize event object
             const delta = evt.detail ? evt.detail : (evt.wheelDelta / -120); //check for detail first so Opera uses that instead of wheelDelta
-            
-            if(delta > 4 && !this.isAnimated) {
+            console.log(delta);
+            if(delta > 4 && !this.getIsAnimated) {
                 this.$store.dispatch('setDigitalValue', 1)
-            } else if(delta < -4 && !this.isAnimated) {
+            } else if(delta < -4 && !this.getIsAnimated) {
                 this.$store.dispatch('setDigitalValue', -1)
             }
 

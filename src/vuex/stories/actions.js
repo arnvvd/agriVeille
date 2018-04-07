@@ -33,8 +33,14 @@ const actionsList = {
         const maxValue = store.state.stories.length;
         const newDigitaleValue = currentDigitalValue + value;
 
-        if (newDigitaleValue > 0 && newDigitaleValue < maxValue + 1) {
+        if (newDigitaleValue > 0 && newDigitaleValue < maxValue + 2) {
             store.commit(types.SET_DIGITALVALUE, newDigitaleValue);
+            store.commit(types.SET_ANIMATED, true);
+
+            // Delete just test for animation
+            setTimeout(() => {
+                store.commit(types.SET_ANIMATED, false);
+            }, 1200)
         }
     }
 };
