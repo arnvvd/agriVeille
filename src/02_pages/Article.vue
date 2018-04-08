@@ -48,6 +48,20 @@
         components: {
             ArticleProfile
         },
+        methods: {
+            initScrollClasses: () => {
+                // Active Class
+                const $appearEl = document.querySelectorAll('.js-scroll-active');
+
+                if ($appearEl) {
+                    [].forEach.call($appearEl, (item, i) => {
+                        new ScrollActive(item, {
+                            screenOffset: "bottom", // or "middle"
+                        });
+                    });
+                }
+            }
+        },
         computed: {
             ...mapGetters(['getStoryBySlug']),
             story: function () {
@@ -55,18 +69,10 @@
             }
         },
         updated() { 
-            // Active Class
-            const $appearEl = document.querySelectorAll('.js-scroll-active');
-
-            if ($appearEl) {
-                [].forEach.call($appearEl, (item, i) => {
-                    new ScrollActive(item, {
-                        screenOffset: "bottom", // or "middle"
-                    });
-                });
-            }
-
-            console.log(this.scrollInstanceArr);
+            this.initScrollClasses();
+        },
+        mounted() {
+            this.initScrollClasses();
         }
     }
 </script>
@@ -157,6 +163,11 @@
                     transform: translateY(10rem);
                     margin-bottom: 10rem;
                     transition: opacity 1s $easeCustom, transform .6s $easeCustom;
+
+                    &:first-child {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
 
                     &:last-child {
                         margin-bottom: 0;

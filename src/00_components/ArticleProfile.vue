@@ -13,11 +13,25 @@
 <script>
 import loaderImage from '../../static/assets/images/loader.png'
 
+import Sticky from '@/assets/js/classes/Sticky.js';
+
 export default {
     data () {
         return {
             loaderImage: loaderImage
         }
+    },
+    mounted() {
+        const $el = this.$el;
+        console.log($el);
+        const $parent = this.$el.parentNode.parentNode;
+        new Sticky($parent, {
+            $element : $el,
+            stickedClass : 'is-sticked',
+            positionnedClass : 'is-positionned',
+            marginTop: 0,
+            marginBottom: 40
+        });
     }
 }
 </script>
@@ -28,6 +42,13 @@ export default {
     .article { 
 
         &__profile {
+
+            &.is-sticked {
+                position: fixed;
+                top: 4rem;
+                left: 4rem;
+                max-width: 30rem;
+            }
 
             &__header {
                 position: relative;
