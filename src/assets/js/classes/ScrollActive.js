@@ -55,7 +55,7 @@ export default class ScrollActive {
         } else if (this.screenOffset === "middle") {
             this.screenOffsetVal = this.wHeight * .5;
         } else if (this.screenOffset === "bottom" ) {
-            this.screenOffsetVal = this.wHeight * .8;
+            this.screenOffsetVal = this.wHeight * .9;
         }
 
     }

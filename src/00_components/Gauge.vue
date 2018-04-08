@@ -5,26 +5,34 @@
         </div>
         <div class="gauge__illu">
             <div class="gauge__illu__wrapper">
-
+                <img :src="image" alt="Loader example">
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
+    import getHead from '@/assets/js/utils/gaugeImage.js';
     /* Import Action STORE*/
     import { mapActions, mapGetters } from 'vuex';
 
     export default  {
+        data () {
+            return {
+                image: getHead(1)
+            }
+        },
         computed: {
             ...mapGetters([
                 'getDigitalValue', 
                 'getPercentValue'
             ])
         },
-         watch: {
+        watch: {
             getDigitalValue(val) {
                 console.log(val);
+                this.image = getHead(val);
             }, 
             getPercentValue(val) {
                 const el = this.$el.querySelector('.gauge__indicator__value');
@@ -95,6 +103,15 @@
                 border: 2px solid $black;
                 background-color: $main-color;
                 transform: translate(-50%, -50%);
+
+                img {
+                    position: absolute;
+                    bottom: 1rem;
+                    width: 15rem;
+                    left: 50%;
+                    max-width: 15rem;
+                    transform: translateX(-50%);
+                }
             } 
         } 
     }

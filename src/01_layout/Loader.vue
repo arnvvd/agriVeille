@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import loaderImage from '../../static/assets/images/loader.png'
+import loaderImage from '../../static/assets/images/loader.gif'
 
 export default {
     data () {
@@ -49,7 +49,7 @@ export default {
         img {
             display: block;
             left: 50%;
-            width: 10rem;
+            width: 20rem;
         }
 
 

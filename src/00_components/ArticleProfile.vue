@@ -2,7 +2,7 @@
     <aside class="article__profile">
         <h2 class="article__profile__title heading--3">About me</h2>
         <div class="article__profile__header">
-            
+            <img v-if="image" :src="image" alt="Loader example">
         </div>
         <p class="article__profile__desc teasing--2">
             Moi c’est John, 52 ans, originaire d’Irlande et agriculteur éleveur en Beauce. Découvre comment j’ai digitalisé ma ferme vindieu.
@@ -11,17 +11,26 @@
 </template>
 
 <script>
-import loaderImage from '../../static/assets/images/loader.png'
 
+import getHead from '@/assets/js/utils/gaugeImage.js';
 import Sticky from '@/assets/js/classes/Sticky.js';
+
+/* Import Action STORE*/
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
     data () {
         return {
-            loaderImage: loaderImage
+            image: ""
         }
     },
+    computed: {
+        ...mapGetters([
+            'getDigitalValue'
+        ])
+    },
     mounted() {
+        this.image = getHead(this.getDigitalValue);
         const $el = this.$el;
         const $parent = this.$el.parentNode;
         new Sticky($parent, {
@@ -72,6 +81,15 @@ export default {
                     border-radius: 50%;
                     background-color: #89A164;
                     transform: translate(-50%, 0);
+                }
+
+                img {
+                    position: absolute;
+                    bottom: 50%;
+                    width: 25rem;
+                    left: 50%;
+                    max-width: 25rem;
+                    transform: translate(-50%, 50%);
                 }
             }
 
