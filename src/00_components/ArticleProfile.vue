@@ -23,8 +23,7 @@ export default {
     },
     mounted() {
         const $el = this.$el;
-        console.log($el);
-        const $parent = this.$el.parentNode.parentNode;
+        const $parent = this.$el.parentNode;
         new Sticky($parent, {
             $element : $el,
             stickedClass : 'is-sticked',
@@ -42,6 +41,11 @@ export default {
     .article { 
 
         &__profile {
+
+            position: absolute;
+            top: 4rem;
+            left: 4rem;
+            max-width: 30rem;
 
             &.is-sticked {
                 position: fixed;

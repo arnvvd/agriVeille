@@ -22,10 +22,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="article__content--right">
-                    <article-profile></article-profile>
-                </div>
             </div>
+            <article-profile></article-profile>
         </div>
     </article>
 </template>
@@ -94,6 +92,7 @@
         }
 
         &__wrapper {
+            position: relative;
             background-color: lighten($main-color, 20%);
         }
 
@@ -102,13 +101,6 @@
             max-width: 168rem;
             margin: 0 auto;
             padding: 4rem;
-
-            &--right {
-                position: absolute;
-                top: 4rem;
-                left: 4rem;
-                max-width: 30rem;
-            }
 
             &--left {
                 max-width: 128rem;
