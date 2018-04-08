@@ -12,6 +12,7 @@ import actionList from './actions';
 const state = {
     datasFetched: false,
     isOnboarded: false,
+    isEnded: false,
     isAnimated: false,
     digitalValue: 1,
     percentValue: 0,
@@ -36,6 +37,10 @@ const mutations = {
         state.isOnboarded = true;
     },
 
+    [ types.SET_ENDED ] (state, value) {
+        state.isEnded = value;
+    },
+
     [ types.SET_DIGITALVALUE ] (state, value) {
         state.digitalValue = value;
     },
@@ -50,7 +55,7 @@ const mutations = {
 
     [ types.SET_PERCENTEVALUE] (state, value) {
         state.percentValue = value;
-    },
+    }
 };
 
 /* Getters */

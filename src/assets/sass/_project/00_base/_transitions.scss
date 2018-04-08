@@ -51,3 +51,36 @@
 .transition-onboarding-enter, .transition-onboarding-leave-to {
     opacity: 0;
 }
+
+.ending__content {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .6s $easeCustom;
+}
+
+
+/*********************/
+/****** Ending ******/
+/*********************/
+.transition-ending-enter-active {
+    transition: all 1s ease;
+}
+
+.transition-ending-leave-active {
+    transition: all 1s ease;
+}
+
+.transition-ending-enter, .transition-ending-leave-to { 
+    opacity: 0;
+
+    .ending__content {
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+}
+
+.ending__content {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .6s $easeCustom;
+}

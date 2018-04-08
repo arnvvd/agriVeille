@@ -44,8 +44,9 @@ const actionsList = {
             store.commit(types.SET_PERCENTEVALUE, percent);
             
             if (newDigitaleValue == maxValue + 1) {
-                //alert("End")
+                store.commit(types.SET_ENDED, true);
             } else {
+                store.commit(types.SET_ENDED, false);
                 store.commit(types.SET_ANIMATED, true);
                 // Save current story (watch it for nikita)
                 store.commit(types.SET_CURRENT_STORY, currentStory(store.state.stories, newDigitaleValue))

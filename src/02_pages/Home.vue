@@ -5,6 +5,9 @@
         <gauge></gauge>
         <transition name="transition-onboarding">
             <onboarding v-if="!getIsOnboarded"></onboarding>
+        </transition>
+        <transition name="transition-ending">
+            <ending v-if="getIsEnded"></ending>
         </transition> 
     </div>
 </template>
@@ -14,6 +17,7 @@
 import Canvas from '@/00_components/Canvas.vue';
 import Gauge from '@/00_components/Gauge.vue';
 import Onboarding from '@/01_layout/Onboarding.vue';
+import Ending from '@/01_layout/Ending.vue';
 
 /* Import Action STORE*/
 import { mapActions, mapGetters } from 'vuex';
@@ -28,11 +32,13 @@ export default {
     components: {
         'homeCanvas': Canvas,
         Gauge,
-        Onboarding
+        Onboarding,
+        Ending
     },
     computed: {
         ...mapGetters([
             'getIsOnboarded',
+            'getIsEnded',
             'getIsAnimated'
         ])
     },
