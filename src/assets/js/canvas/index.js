@@ -12,17 +12,16 @@ export default class Canvas {
         const w = window.innerWidth;
         const h = window.innerHeight;
         this.scene = new Scene( w, h );
-
+        
         this.loader = new Loader()
-        this.loader.addInLoader(['../../../tracteur.jpg']).then( ()=> {
+        this.loader.addInLoader(['../../../static/assets/images/tracteur.png']).then( ()=> {
            this.loader.load()
         })
 
         this.loader.loader.onComplete.add(()=> {
            this.resources = this.loader.loader.resources
-           this.pop = new Pop({urls:['../../../static/assets/images/CartoonSmoke.png'], stage: this.scene.stage})
+           this.pop = new Pop({urls:['../../../static/assets/images/CartoonSmoke.png'], stage: this.scene.stage, resources:this.resources})
 
-          
         })
 
         this.particle = new Particle();
@@ -40,8 +39,12 @@ export default class Canvas {
     update( DELTA_TIME ) {
         if (this.particle) {
             this.particle.update();
-            if(this.pop.emitter) this.pop.emitter.update(DELTA_TIME*0.001)
         }
+        if(this.pop && this.pop.particlesEmitter) {
+
+            this.pop.particlesEmitter.update(DELTA_TIME*0.001)
+        }
+
     }
 
 
