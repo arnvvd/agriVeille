@@ -48,7 +48,6 @@ const actionsList = {
             } else {
                 store.commit(types.SET_ENDED, false);
                 store.commit(types.SET_ANIMATED, true);
-                // Save current story (watch it for nikita)
                 store.commit(types.SET_CURRENT_STORY, currentStory(store.state.stories, newDigitaleValue))
             } 
 
