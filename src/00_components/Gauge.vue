@@ -45,7 +45,7 @@
         height: 48rem;
         width: 3.4rem;
         transform: translateY(-50%);
-        border: 3px solid $black;
+        border: 2px solid $black;
         border-radius: 2.6rem;
         background-color: $dark-grey;
 
@@ -55,7 +55,7 @@
             left: 50%;
             width: 1.5rem;
             height: 34.4rem;
-            border: 3px solid $black;
+            border: 2px solid $black;
             border-radius: 1.5rem;
             background-color: $white;
             transform: translateX(-50%);
@@ -76,11 +76,11 @@
 
         &__illu {
             position: absolute;
-            bottom: -3px;
+            bottom: -2px;
             left: 50%;
             width: 13.5rem;
             height: 13.5rem;
-            border: 3px solid $black;
+            border: 2px solid $black;
             border-radius: 50%;
             background-color: $dark-grey;
             transform: translateX(-50%);
@@ -92,7 +92,7 @@
                 width: calc(100% - 1rem);
                 height: calc(100% - 1rem);
                 border-radius: 50%;
-                border: 3px solid $black;
+                border: 2px solid $black;
                 background-color: $main-color;
                 transform: translate(-50%, -50%);
             } 

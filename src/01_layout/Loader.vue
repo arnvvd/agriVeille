@@ -11,9 +11,9 @@
 import loaderImage from '../../static/assets/images/loader.png'
 
 export default {
-  data () {
+    data () {
         return {
-          image: loaderImage
+            image: loaderImage
         }
     }
 }

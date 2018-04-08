@@ -8,12 +8,38 @@
 /*****************/
 
 @font-face {
-  font-family: 'BebasWebRegular';
-  src: url($fonts_path + 'bebasneue_regular-webfont.woff2') format('woff2'),
-  url($fonts_path + 'bebasneue_regular-webfont.woff') format('woff');
+  font-family: 'AktivGrotesk-Black';
+  src: url($fonts_path + 'AktivGrotesk-Black.woff2') format('woff2'),
+  url($fonts_path + 'AktivGrotesk-Black.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'AktivGrotesk-Light';
+  src: url($fonts_path + 'AktivGrotesk-Light.woff2') format('woff2'),
+  url($fonts_path + 'AktivGrotesk-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AktivGrotesk-Medium';
+  src: url($fonts_path + 'AktivGrotesk-Medium.woff2') format('woff2'),
+  url($fonts_path + 'AktivGrotesk-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AktivGrotesk-Hairline';
+  src: url($fonts_path + 'AktivGrotesk-Hairline.woff2') format('woff2'),
+  url($fonts_path + 'AktivGrotesk-Hairline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 /*****************/
 /****** Google Font Import *****/

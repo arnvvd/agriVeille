@@ -19,7 +19,10 @@ $mq-breakpoints: (
 
 // Fonts
 $font: sans-serif !default;
-$font-regular: 'BebasWebRegular', sans-serif;
+$font-regular: 'AktivGrotesk-Medium', sans-serif;
+$font-bold: 'AktivGrotesk-Black', sans-serif;
+$font-light: 'AktivGrotesk-Light', sans-serif;
+$font-light-light: 'AktivGrotesk-Hairline', sans-serif;
 
 // Colors
 $black: #000;
@@ -28,7 +31,7 @@ $white: #fff;
 $dark-grey: #A5A39F;
 $orange: #E68D40;
 
-$body-text: blue;
+$body-text: #000;
 $main-color: #C9C57A; 
 
 // Paths
