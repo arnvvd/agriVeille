@@ -5,7 +5,9 @@ const gettersList = {
     getIsOnboarded: state => state.isOnboarded,
     getIsAnimated: state => state.isAnimated,
     getDigitalValue: state => state.digitalValue,
+    getPercentValue: state => state.percentValue,
     getStories: state => state.stories,
+    getCurrentStory: state => state.currentStory,
     getStoryBySlug: state => (slug) => {
         const story = state.stories.filter(story => story.slug == slug);
         if (story.length) {

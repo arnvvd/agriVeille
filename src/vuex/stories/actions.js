@@ -33,11 +33,23 @@ const actionsList = {
         const currentDigitalValue = store.state.digitalValue;
         const maxValue = store.state.stories.length;
         const newDigitaleValue = currentDigitalValue + value;
+        const percent = (newDigitaleValue - 1) / maxValue;
 
         if (newDigitaleValue > 0 && newDigitaleValue < maxValue + 2) {
+
+            // Save current value
             store.commit(types.SET_DIGITALVALUE, newDigitaleValue);
-            store.commit(types.SET_ANIMATED, true);
-            store.commit(types.SET_CURRENT_STORY, currentStory(store.state.stories, newDigitaleValue))
+
+            // Save percent
+            store.commit(types.SET_PERCENTEVALUE, percent);
+            
+            if (newDigitaleValue == maxValue + 1) {
+                //alert("End")
+            } else {
+                store.commit(types.SET_ANIMATED, true);
+                // Save current story (watch it for nikita)
+                store.commit(types.SET_CURRENT_STORY, currentStory(store.state.stories, newDigitaleValue))
+            } 
 
             // Delete just test for animation
             setTimeout(() => {
@@ -56,9 +68,6 @@ function currentStory(storyArr, id) {
         return story[0];
     }
 } 
-
-
-
 
 function slugify(text) {
   return text.toString().toLowerCase()

@@ -2,6 +2,7 @@
     <div class="home">
         <h1>{{title}}</h1>
         <home-canvas></home-canvas>
+        <gauge></gauge>
         <transition name="transition-onboarding">
             <onboarding v-if="!getIsOnboarded"></onboarding>
         </transition> 
@@ -11,6 +12,7 @@
 
 <script>
 import Canvas from '@/00_components/Canvas.vue';
+import Gauge from '@/00_components/Gauge.vue';
 import Onboarding from '@/01_layout/Onboarding.vue';
 
 /* Import Action STORE*/
@@ -25,6 +27,7 @@ export default {
     },
     components: {
         'homeCanvas': Canvas,
+        Gauge,
         Onboarding
     },
     computed: {
@@ -61,7 +64,6 @@ export default {
         onScrollJack(e) {
             const evt = window.event || e; //equalize event object
             const delta = evt.detail ? evt.detail : (evt.wheelDelta / -120); //check for detail first so Opera uses that instead of wheelDelta
-            console.log(delta);
             if(delta > 2 && !this.getIsAnimated) {
                 this.$store.dispatch('setDigitalValue', 1)
             } else if(delta < -2 && !this.getIsAnimated) {
