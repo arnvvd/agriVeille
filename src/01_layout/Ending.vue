@@ -38,7 +38,7 @@ export default {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(#FFF, .6);
+        background-color: rgba($main-color, .8);
         z-index: 99;
 
         &__wrapper {
