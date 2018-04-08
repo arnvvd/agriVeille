@@ -14,7 +14,8 @@ const state = {
     isOnboarded: false,
     isAnimated: false,
     digitalValue: 1,
-    stories: []
+    stories: [],
+    currentStory: {}
 };
 
 
@@ -40,6 +41,10 @@ const mutations = {
 
     [ types.SET_ANIMATED] (state, value) {
         state.isAnimated = value;
+    },
+
+    [ types.SET_CURRENT_STORY] (state, value) {
+        state.currentStory = value;
     }
 };
 

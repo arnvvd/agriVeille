@@ -18,6 +18,7 @@ const actionsList = {
             setTimeout(() => {
                 store.commit(types.SET_DATAS_FETCHED);
                 store.commit(types.SET_STORIES, stories);
+                store.commit(types.SET_CURRENT_STORY, currentStory(stories, 1))
                 console.log("End fake fetch");
             }, 2000);
         })
@@ -36,6 +37,7 @@ const actionsList = {
         if (newDigitaleValue > 0 && newDigitaleValue < maxValue + 2) {
             store.commit(types.SET_DIGITALVALUE, newDigitaleValue);
             store.commit(types.SET_ANIMATED, true);
+            store.commit(types.SET_CURRENT_STORY, currentStory(store.state.stories, newDigitaleValue))
 
             // Delete just test for animation
             setTimeout(() => {
@@ -46,6 +48,16 @@ const actionsList = {
 };
 
 export default actionsList;
+
+
+function currentStory(storyArr, id) {
+    const story = storyArr.filter(story => story.id == id);
+    if (story.length) {
+        return story[0];
+    }
+} 
+
+
 
 
 function slugify(text) {

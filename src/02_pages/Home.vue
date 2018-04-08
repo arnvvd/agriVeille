@@ -62,9 +62,9 @@ export default {
             const evt = window.event || e; //equalize event object
             const delta = evt.detail ? evt.detail : (evt.wheelDelta / -120); //check for detail first so Opera uses that instead of wheelDelta
             console.log(delta);
-            if(delta > 4 && !this.getIsAnimated) {
+            if(delta > 2 && !this.getIsAnimated) {
                 this.$store.dispatch('setDigitalValue', 1)
-            } else if(delta < -4 && !this.getIsAnimated) {
+            } else if(delta < -2 && !this.getIsAnimated) {
                 this.$store.dispatch('setDigitalValue', -1)
             }
 
@@ -72,7 +72,6 @@ export default {
         }
     },
     mounted() {
-        console.log(this.getIsOnboarded);
         if (this.getIsOnboarded) {
             this.bindEvents();
         }
@@ -84,7 +83,6 @@ export default {
     },  
     watch: {
         getIsOnboarded : function(val) {
-            console.log('tegr')
             if (val) {
                 this.bindEvents();
             }
