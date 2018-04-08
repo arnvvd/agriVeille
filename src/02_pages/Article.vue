@@ -13,7 +13,7 @@
                 <div class="article__content--left">
                     <h1 class="article__title heading--1" v-html="story.title"></h1>
                     <ul class="article__section__list">
-                        <li v-for="(item, index) in story.data" :key="index">
+                        <li class="js-scroll-active" v-for="(item, index) in story.data" :key="index">
                             <section class="article__section">
                                 <h2 class="article__section__title heading--2">{{item.subtitle}}</h2>
                                 <p class="article__section__published teasing--3">Published on {{item.date | formatDate}} by John</p>
@@ -34,6 +34,7 @@
     import banner from '../../static/assets/svg/banner.svg'
 
     import ArticleProfile from '@/00_components/ArticleProfile.vue';
+    import ScrollActive from '@/assets/js/classes/ScrollActive.js';
 
     /* Import Action STORE*/
     import { mapActions, mapGetters } from 'vuex';
@@ -53,8 +54,19 @@
                 return this.getStoryBySlug(this.$route.params.storySlug);
             }
         },
-        mounted() {
-            console.log(this.$route)
+        updated() { 
+            // Active Class
+            const $appearEl = document.querySelectorAll('.js-scroll-active');
+
+            if ($appearEl) {
+                [].forEach.call($appearEl, (item, i) => {
+                    new ScrollActive(item, {
+                        screenOffset: "bottom", // or "middle"
+                    });
+                });
+            }
+
+            console.log(this.scrollInstanceArr);
         }
     }
 </script>
@@ -141,10 +153,19 @@
 
             &__list {
                 li {
+                    opacity: 0;
+                    transform: translateY(10rem);
                     margin-bottom: 10rem;
+                    transition: opacity 1s $easeCustom, transform .6s $easeCustom;
 
                     &:last-child {
                         margin-bottom: 0;
+                    }
+
+                    &.is-scroll-active {
+                        opacity: 1;
+                        transform: translateY(0);
+                        transition: opacity 1s $easeCustom, transform .6s $easeCustom;
                     }
                 }
             }
