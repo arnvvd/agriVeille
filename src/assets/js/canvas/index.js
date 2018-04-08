@@ -14,14 +14,22 @@ export default class Canvas {
         const h = window.innerHeight;
         this.scene = new Scene( w, h );
         
+        this.urls = [
+            ['../../../static/assets/images/tracteur.png',
+            '../../../static/assets/images/boss.jpg'
+            ],
+            ['../../../static/assets/images/head-1.png']
+
+        ]
+
         this.loader = new Loader()
-        this.loader.addInLoader(['../../../static/assets/images/tracteur.png']).then( ()=> {
+        this.loader.addInLoader(this.urls).then( ()=> {
            this.loader.load()
         })
 
         this.loader.loader.onComplete.add(()=> {
            this.resources = this.loader.loader.resources
-           this.pop = new Pop({urls:['../../../static/assets/images/CartoonSmoke.png'], stage: this.scene.stage, resources:this.resources})
+           this.pop = new Pop({urls:['../../../static/assets/images/CartoonSmoke.png'], stage: this.scene.stage, resources:this.resources, stories: this.urls})
 
         })
 
@@ -39,11 +47,18 @@ export default class Canvas {
         this.interactiveParticle.position.y = this.scene.renderer.height/2;
         this.scene.addChild( this.interactiveParticle );
 
+        this.lastId = 0
     }
 
     nikita(id, slug) {
-        console.log(id);
-        console.log(slug);
+        this.currentId = id
+        if(this.currentId <= this.lastId) {
+            //remove from scene
+        } else {
+            this.pop.addIllu(id, slug); 
+            this.lastId ++ 
+        }
+        
     }
 
     attachToContainer() {
