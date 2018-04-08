@@ -77,6 +77,15 @@
         transform: translateY(10rem);
         opacity: 0;
     }
+
+    .ending__top {
+        opacity: 0;
+    }
+}
+
+.ending__top {
+    opacity: 1;
+    transition: opacity .4s $easeCustom;
 }
 
 .ending__content {
