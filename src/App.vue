@@ -1,15 +1,25 @@
 <template>
   <main id="app">
-    <navigation></navigation>
-    <btn-increment></btn-increment>
-    <transition name="transition-page">
-        <router-view></router-view>
+
+    <!-- Loader-->
+    <transition name="transition-loader">
+        <loader v-if="!getDatasFetched"></loader>
+    </transition>
+
+    <!-- Main Navigation-->
+    <navigation :stories="getStories"></navigation>
+
+    <!-- Router-->
+    <transition :name="transitionName">
+        <router-view :key="$route.params.storySlug"></router-view>
     </transition> 
+    
   </main>
 </template>
 
 
 <script>
+
     /*Import*/
     import debounce from '@/assets/js/utils/debounce.js';
     import Emitter from '@/core/eventemitter.js'; 
@@ -18,17 +28,38 @@
     } from '@/core/messages.js';
 
     /*Import Components*/
-    import BtnIncrement from '@/00_components/BtnIncrement.vue';
     import Navigation from '@/01_layout/Navigation.vue';
+    import Loader from '@/01_layout/Loader.vue';
+
+    /* Import Action STORE*/
+    import { mapActions, mapGetters } from 'vuex';
+    
 
     export default {
-        components: {
-            'btn-increment': BtnIncrement,
-            'navigation': Navigation
+        data () {
+            return {
+                transitionName: 'transition-page'
+            }
         },
 
+        components: {
+            'navigation': Navigation,
+            'loader': Loader
+        },
+
+
+        computed: {
+            ...mapGetters([
+                'getDatasFetched',
+                'getStories'
+            ])
+        },
+
+
         methods: {
-             bindEvents() {
+            ...mapActions(['setStories']),
+
+            bindEvents() {
                 if (!this._bindedResize) {
                     this._bindedResize = debounce(this.onResize.bind(this), 100);
                     window.addEventListener('resize', this._bindedResize);
@@ -50,12 +81,26 @@
             }
         },
 
+
         mounted() {
             this.bindEvents();
+            this.setStories();
         },
+
 
         beforeDestroy() {
             this.unbindEvents();
+        },
+
+
+        watch: {
+            '$route' (to, from) {
+                if (to.meta.transition) {
+                    this.transitionName = to.meta.transition
+                } else {
+                    this.transitionName = 'transition-page'
+                }  
+            }
         }
     }
 </script>

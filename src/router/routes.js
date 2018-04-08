@@ -1,9 +1,28 @@
 import Home from '@/02_pages/Home.vue'
 import About from '@/02_pages/About.vue'
+import Article from '@/02_pages/Article.vue'
 
 const routes = [
-    { path: '/', component: Home},
-    { path: '/about', component: About }
+    { 
+        path: '/', 
+        name: 'home',
+        component: Home,
+        meta: {}
+    },
+    { 
+        path: '/about', 
+        name: 'about',
+        component: About,
+        meta: {
+            transition: 'transition-about'
+        } 
+    },
+    { 
+        path: '/article/:storySlug', 
+        name: 'article',
+        component: Article,
+        meta: {} 
+    }
 ];
 
 export default routes;

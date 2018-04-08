@@ -21,3 +21,37 @@
 /********************************/
 
 /* Add mixins here for font-style--alpha / --beta ... */
+
+
+.heading--1 {
+  @include font-style ($font: $font-bold, $font-size: 8.5rem, $weight : 400, $style: italic, $line-height : 77/85);
+}
+
+.heading--2 {
+  @include font-style ($font: $font-bold, $font-size: 4rem, $weight : 400, $style: normal, $line-height : 48/40);
+}
+
+.heading--3 {
+  @include font-style ($font: $font-bold, $font-size: 2.6rem, $weight : 400, $style: normal, $line-height : 32/26);
+}
+
+.heading--4 {
+  @include font-style ($font: $font-bold, $font-size: 4rem, $weight : 400, $style: italic, $line-height : 50/40);
+}
+
+
+.teasing--1 {
+  @include font-style ($font: $font-light, $font-size: 2.4rem, $weight: 400, $style: normal, $line-height: 32/24);
+}
+
+.teasing--2 {
+  @include font-style ($font: $font-light, $font-size: 2rem, $weight : 400, $style: italic, $line-height : 30/20);
+}
+
+.teasing--3 {
+  @include font-style ($font: $font-light-light, $font-size: 2.4rem, $weight : 400, $style: normal, $line-height : 32/24);
+}
+
+.teasing--4 {
+  @include font-style ($font: $font-regular, $font-size: 1.8rem, $weight: 400, $style: italic, $line-height: 28/18);
+}

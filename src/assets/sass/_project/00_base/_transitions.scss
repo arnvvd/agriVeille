@@ -1,0 +1,95 @@
+/*********************/
+/****** Page Default ******/
+/*********************/
+.transition-page-enter-active {
+    transition: all .3s ease .4s;
+}
+.transition-page-leave-active {
+    transition: all .4s ease;
+}
+.transition-page-enter, .transition-page-leave-to
+    /* .slide-fade-leave-active for <2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+
+/*********************/
+/****** Page About ******/
+/*********************/
+.transition-about-enter-active {
+    transition: all .3s ease .4s;
+}
+.transition-about-leave-active {
+    transition: all .4s ease;
+}
+.transition-about-enter, .transition-about-leave-to
+    /* .slide-fade-leave-active for <2.1.8 */ {
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+
+/*********************/
+/****** Loader ******/
+/*********************/
+.transition-loader-leave-active {
+    transition: height .8s $easeCustom
+}
+.transition-loader-enter, .transition-loader-leave-to {
+    height: 0!important
+}
+
+
+/*********************/
+/****** Onboarding ******/
+/*********************/
+
+.transition-onboarding-leave-active {
+    transition: all .3s ease .4s;
+}
+.transition-onboarding-enter, .transition-onboarding-leave-to {
+    opacity: 0;
+}
+
+.ending__content {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .6s $easeCustom;
+}
+
+
+/*********************/
+/****** Ending ******/
+/*********************/
+.transition-ending-enter-active {
+    transition: all 1s ease;
+}
+
+.transition-ending-leave-active {
+    transition: all 1s ease;
+}
+
+.transition-ending-enter, .transition-ending-leave-to { 
+    opacity: 0;
+
+    .ending__content {
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+
+    .ending__top {
+        opacity: 0;
+    }
+}
+
+.ending__top {
+    opacity: 1;
+    transition: opacity .4s $easeCustom;
+}
+
+.ending__content {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .6s $easeCustom;
+}

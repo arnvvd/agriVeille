@@ -3,9 +3,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import store from './vuex/store';
+import store from './vuex/store'
 import * as PIXI from 'pixi.js'
+import moment from 'moment'
 Vue.config.productionTip = false
+
+// Fiter date
+Vue.filter('formatDate', (value) => {
+    if (value) {
+        return moment(value,'DD/MM/YYYY').format('LL');
+    }
+})
 
 /* eslint-disable no-new */
 new Vue({
