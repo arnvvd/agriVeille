@@ -41,6 +41,10 @@ export default class Canvas {
 
     }
 
+    nikita(id, slug) {
+        console.log(id);
+        console.log(slug);
+    }
 
     attachToContainer() {
         this.container.appendChild( this.scene.renderer.view );

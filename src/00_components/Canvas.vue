@@ -12,18 +12,21 @@
         CANVAS_CLICK
     } from '@/core/messages.js';
 
-
     /* Vue Imports */
     import router from '@/router'
+
+    /* Import Action STORE*/
+    import { mapGetters } from 'vuex';
 
     export default {
     	data() {
     		return {}
         },
-
+        computed: {
+            ...mapGetters(['getCurrentStory'])
+        },
         methods: {
             bindEvents() {
-
                 Emitter.on(CANVAS_CLICK, this.canvasClick = (args) => {
                     router.push({ name: 'article', params: { storySlug: args.slug }})
                 });
@@ -73,6 +76,12 @@
 
         beforeDestroy() {
             this.unbindEvents();
+        },
+
+        watch: {
+            getCurrentStory : function(val) {
+                this.canvas.nikita(val.id, val.slug)
+            } 
         }
     }
 </script>
