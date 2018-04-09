@@ -1,6 +1,7 @@
 <template>
     <div class="about">
         <timeline-global v-if="getStories" :stories="getStories"></timeline-global>
+        <reference v-if="getStories" :stories="getStories"></reference>
     </div>
 </template>
 
@@ -8,6 +9,7 @@
     /* Import Action STORE*/
     import { mapGetters } from 'vuex';
     import TimelineGlobal from '@/00_components/TimelineGlobal.vue';
+    import Reference from '@/00_components/Reference.vue';
 
     export default {
         data () {
@@ -17,7 +19,7 @@
             }
         },
         components: {
-            TimelineGlobal
+            TimelineGlobal, Reference
         },
         computed: {
             ...mapGetters(['getStories'])
@@ -28,6 +30,11 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
     .about {
-        padding: 4rem 0;
+        background-color: #e6e5c3; //green
+        padding: 4rem 10%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 </style>

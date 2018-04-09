@@ -1,14 +1,19 @@
 <template>
     <div class="timeline__global">
         <div class="timeline__global__wrapper">
-            <ul class="timeline__global__section">
-                <li class="timeline__global_section__item" v-for="(category, index) in this.timelineStory" :key="index">
-                    <div class="timeline__global__category">{{category.title}}</div>
-                    <ul>
-                        <li v-for="(item, key) in category.itemArr" :key="key">
-                            {{item.left}}
+            <ul class="timeline__global__wrapper__section">
+                <li class="timeline__global__wrapper__section__item" v-for="(category, index) in this.timelineStory" :key="index">
+                    <div class="timeline__global__wrapper__section__item__category">{{category.title}}</div>
+                    <ul class="timeline__global__wrapper__section__item__dates">
+                        <li class="timeline__global__wrapper__section__item__dates__date" v-for="(item, key) in category.itemArr" :key="key" v-bind:style="{left: item.left + '%'}">
+                            <!--{{item.date}}-->
                         </li>
                     </ul>
+                </li>
+                <li class="timeline__global__wrapper__section__ref">
+                    <p class="timeline__global__wrapper__section__ref__start">Nov.</p>
+                    <p class="timeline__global__wrapper__section__ref__section"></p>
+                    <p class="timeline__global__wrapper__section__ref__end">Avr.</p>
                 </li>
             </ul>
         </div>
@@ -31,7 +36,6 @@
         props: ['stories'],
         methods: {
             calcSectionsPosition(){
-                // console.log(this.stories);
                 this.stories.map(category => { // add a top position for each category
 
                     const story = {};
@@ -62,6 +66,57 @@
     }
 </script>
 
-<style>
+<style lang="scss">
+    @import "~styles/main.scss";
 
+    .timeline__global {
+        &__wrapper {
+            &__section {
+                &__item {
+                    margin-bottom: 20px;
+                    &__category {
+                    }
+                    &__dates {
+                        width: 75%;
+                        left: 25%;
+                        position: relative;
+                        &__date {
+                            position: absolute;
+                            top: -1.5rem;
+                            width: 1rem;
+                            height: 1rem;
+                            border-radius: 50%;
+                            background-color: $black;
+                            &:hover {
+                                cursor: pointer;
+                                background-color: $main-color;
+                            }
+                        }
+                    }
+                }
+                &__ref {
+                    position: relative;
+                    height: 30px;
+                    left: 25%;
+                    width: 75%;
+                    &__start {
+                        position: absolute;
+                        left: -2.5em;
+                        top: -.7em;
+                    }
+                    &__section {
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background: black;
+                    }
+                    &__end {
+                        position: absolute;
+                        right: -2.2em;
+                        top: -.7em;
+                    }
+                }
+            }
+        }
+    }
 </style>

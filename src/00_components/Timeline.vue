@@ -4,7 +4,7 @@
             <p class="timeline__start">Nov.</p>
             <ul class="timeline__sections">
                 <li class="timeline__sections__indicator"  v-for="(item, index) in this.sectionComputed" :key="index" v-bind:style="{ left: item.position + '%' }">
-                    <p class="timeline__sections__source">{{item.date}} - {{item.source}}</p>
+                    <p class="timeline__sections__source">{{item.date}} - {{item.source.title}}</p>
                 </li>
             </ul>
             <p class="timeline__end">Avr.</p>
