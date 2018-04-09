@@ -31,7 +31,6 @@
         },
         watch: {
             getDigitalValue(val) {
-                console.log(val);
                 this.image = getHead(val);
             }, 
             getPercentValue(val) {
