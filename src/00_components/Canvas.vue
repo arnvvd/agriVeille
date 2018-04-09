@@ -9,7 +9,8 @@
     import Emitter from '@/core/eventemitter.js'; 
     import {
         WINDOW_RESIZE,
-        CANVAS_CLICK
+        CANVAS_CLICK,
+        IS_ANIMATED
     } from '@/core/messages.js';
 
     /* Vue Imports */
@@ -36,6 +37,10 @@
                     this.canvas.height = args.height
                     this.canvas.resize(args.width, args.height);
                 });
+
+                Emitter.on(IS_ANIMATED, this.illuAnimated = (args) => {
+                    this.$store.dispatch('setIsNotAnimated')
+                })
                 
                 if (!this._bindedUpdate) {
                     this._bindedUpdate = this.update.bind(this);
@@ -81,6 +86,7 @@
         watch: {
             getCurrentStory : function(val) {
                 this.canvas.nikita(val.id, val.slug)
+                this.$store.dispatch('setIsAnimated')
             } 
         }
     }

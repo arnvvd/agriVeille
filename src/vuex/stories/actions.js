@@ -29,6 +29,14 @@ const actionsList = {
         store.commit(types.SET_ONBOARDED);
     }, 
 
+    setIsNotAnimated: (store) => {
+        store.commit(types.SET_ANIMATED, false);
+    }, 
+
+    setIsAnimated: (store) => {
+        store.commit(types.SET_ANIMATED, true);
+    }, 
+
     setDigitalValue: (store, value) => {
         const currentDigitalValue = store.state.digitalValue;
         const maxValue = store.state.stories.length;
@@ -42,20 +50,28 @@ const actionsList = {
 
             // Save percent
             store.commit(types.SET_PERCENTEVALUE, percent);
+
+            if (newDigitaleValue == maxValue + 1) {
+                store.commit(types.SET_ENDED, true);
+            } else if(newDigitaleValue == maxValue) {
+                store.commit(types.SET_ANIMATED, true);
+                setTimeout(() => {
+                    store.commit(types.SET_ANIMATED, false);
+                }, 1000)
+            } else {
+                store.commit(types.SET_ENDED, false);
+                // Save current story (watch it for nikita)
+                store.commit(types.SET_CURRENT_STORY, currentStory(store.state.stories, newDigitaleValue))
+            }
             
             if (newDigitaleValue == maxValue + 1) {
                 store.commit(types.SET_ENDED, true);
+                store.commit(types.SET_ANIMATED, false);
             } else {
                 store.commit(types.SET_ENDED, false);
-                store.commit(types.SET_ANIMATED, true);
                 // Save current story (watch it for nikita)
                 store.commit(types.SET_CURRENT_STORY, currentStory(store.state.stories, newDigitaleValue))
             } 
-
-            // Delete just test for animation
-            setTimeout(() => {
-                store.commit(types.SET_ANIMATED, false);
-            }, 1200)
         }
     }
 };

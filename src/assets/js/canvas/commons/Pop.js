@@ -1,7 +1,8 @@
 import {TweenLite} from 'gsap'
 import Emitter from '@/core/eventemitter.js'; 
 import {
-    CANVAS_CLICK
+    CANVAS_CLICK,
+    IS_ANIMATED
 } from '@/core/messages.js';
 
 
@@ -98,7 +99,7 @@ class Pop {
             TweenLite.to(this.stage.children[(this.stage.children.length-1)-i], 0.3, {width: 0, height: 0, ease:Back.easeIn.config(1.7), onCompleteScope: this, onComplete:function(){
                 if(i == this.stories[id-1].length -1) {
                     this.stage.removeChildren(this.stage.children.length - this.stories[id-1].length, this.stage.children.length)
-                    console.log(this.stage)
+                    Emitter.emit(IS_ANIMATED, {ok: 'ok'})
                 }   
             }})
         }
@@ -151,7 +152,7 @@ class Pop {
     
             TweenLite.from(illu, 0.3, { ease: Back.easeOut.config(1.7), width: 0, height: 0, delay: i/10, onCompleteScope: this, onComplete:function() {
                 if(i == this.stories[id-1].length -1) {
-                    // Emitter.emit()
+                    Emitter.emit(IS_ANIMATED, {ok: 'ok'})
                 }
             } });
             TweenLite.from(illu, .25, { alpha: 0, delay: i/10 });
