@@ -85,57 +85,29 @@ class Pop {
         this.particlesEmitter.emit = false
     }
 
-    add(id, slug, i) {
-        let pos = {
-            x : Math.random()*window.innerWidth,
-            y: Math.random()*window.innerHeight
-        }
-
-        let positionScale = {
-            x: ((window.innerWidth/(1046*this.stage.scale.x))*this.stage.scale.x),
-            y:((window.innerHeight/(675*this.stage.scale.x))*this.stage.scale.x)
-        }
-
-        if(!this.particlesEmitter) return;
-        
-        setTimeout(()=> {
-            this.particlesEmitter.emit = true;
-            this.particlesEmitter.resetPositionTracking();     
-            this.particlesEmitter.updateOwnerPos(pos.x/positionScale.x || pos.x/positionScale.x, pos.y/positionScale.y || pos.y/positionScale.y);
-        }, i*300)
    
-        let texture = this.resources["illu00"].texture
-
-       
-        let illu = new PIXI.Sprite(texture)
-     
-        illu.x = pos.x/positionScale.x;
-        illu.y = pos.y/positionScale.y;
-        
-        illu.interactive = true;
-        illu.hitArea = new PIXI.Rectangle(0, 0, illu.width, illu.height);
-   
-        illu.pivot.set(illu.width/2,illu.height/2)   
-        illu.width = (illu.width/3)
-        illu.height = (illu.height/3)
-
+    removeIllu(id) {
         console.log(this.stage)
-        illu.click = function (e) {
-           Emitter.emit(CANVAS_CLICK, {slug: slug});                
-        };
+        for(let i = 0; i < this.stories[id-1].length; i++) {
+            setTimeout(()=> {
+                this.particlesEmitter.emit = true;
+                this.particlesEmitter.resetPositionTracking();     
+                this.particlesEmitter.updateOwnerPos(this.stage.children[(this.stage.children.length-1)-i].x, this.stage.children[(this.stage.children.length-1)-i].y);
+            }, i*80)
 
-        this.stage.addChild(illu)
-
-        TweenLite.from(illu, 0.3, { ease: Back.easeOut.config(1.7), width: 0, height: 0, delay: i/10 });
-        TweenLite.from(illu, .25, { alpha: 0, delay: i/10 });
-
-
-        this.illus.push(illu)
+            TweenLite.to(this.stage.children[(this.stage.children.length-1)-i], 0.3, {width: 0, height: 0, ease:Back.easeIn.config(1.7), onCompleteScope: this, onComplete:function(){
+                if(i == this.stories[id-1].length -1) {
+                    this.stage.removeChildren(this.stage.children.length - this.stories[id-1].length, this.stage.children.length)
+                    console.log(this.stage)
+                }   
+            }})
+        }
     }
 
     addIllu(id, slug) {
         if(!this.particlesEmitter) return;
         for(let i = 0; i < this.stories[id-1].length; i++) {
+            console.log(this.stories)
             this.particlesEmitter.emitterLifetime = 0.200*this.stories[id-1].length
 
             let pos = {
@@ -144,8 +116,8 @@ class Pop {
             }
     
             let positionScale = {
-                x: ((window.innerWidth/(1046*this.stage.scale.x))*this.stage.scale.x),
-                y:((window.innerHeight/(675*this.stage.scale.x))*this.stage.scale.x)
+                x: ((window.innerWidth/(1550*this.stage.scale.x))*this.stage.scale.x),
+                y:((window.innerHeight/(1001*this.stage.scale.x))*this.stage.scale.x)
             }
     
          
@@ -156,7 +128,7 @@ class Pop {
                 this.particlesEmitter.updateOwnerPos(pos.x/positionScale.x || pos.x/positionScale.x, pos.y/positionScale.y || pos.y/positionScale.y);
             }, i*80)
        
-            let texture = this.resources["illu00"].texture
+            let texture = this.resources["illu"+(id-1)+i].texture
     
            
             let illu = new PIXI.Sprite(texture)
@@ -171,14 +143,17 @@ class Pop {
             illu.width = (illu.width/3)
             illu.height = (illu.height/3)
     
-            console.log(this.stage)
             illu.click = function (e) {
                Emitter.emit(CANVAS_CLICK, {slug: slug});                
             };
     
             this.stage.addChild(illu)
     
-            TweenLite.from(illu, 0.3, { ease: Back.easeOut.config(1.7), width: 0, height: 0, delay: i/10 });
+            TweenLite.from(illu, 0.3, { ease: Back.easeOut.config(1.7), width: 0, height: 0, delay: i/10, onCompleteScope: this, onComplete:function() {
+                if(i == this.stories[id-1].length -1) {
+                    // Emitter.emit()
+                }
+            } });
             TweenLite.from(illu, .25, { alpha: 0, delay: i/10 });
     
     

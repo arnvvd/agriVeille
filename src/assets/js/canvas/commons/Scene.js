@@ -10,14 +10,14 @@ export default class Scene {
         
         this.children = [];
         this.sceneSize = {
-            w: 1046,
-            h:675
+            w: 1550,
+            h:1001
         }
         this.stage = new PIXI.Container();
 
-        this.bg = new PIXI.Sprite.fromImage('../../../../static/assets/images/scene.png')
+        this.bg = new PIXI.Sprite.fromImage('../../../../static/assets/images/scene2.png')
         this.stage.addChild(this.bg)
-        this.renderer = new PIXI.WebGLRenderer( this.sceneSize.w, this.sceneSize.h, { transparent: true } );
+        this.renderer = new PIXI.WebGLRenderer( this.sceneSize.w*window.devicePixelRatio, this.sceneSize.h*window.devicePixelRatio, { transparent: true } );
         this.resize(window.innerWidth, window.innerHeight)
     }
 
@@ -56,7 +56,7 @@ export default class Scene {
         console.log(this.stage)
         //console.log(this.stage)
         if (this.height / this.sceneSize.h < this.width / this.sceneSize.w) {
-            this.stage.scale.x = this.stage.scale.y =  this.height/this.sceneSize.h;
+            this.stage.scale.x = this.stage.scale.y =  (this.height/this.sceneSize.h);
 
             
             // this.stage.pivot.x = (this.sceneSize.w - this.width)/2
@@ -66,7 +66,7 @@ export default class Scene {
         } else {
            
 
-            this.stage.scale.x = this.stage.scale.y = this.width/this.sceneSize.w;
+            this.stage.scale.x = this.stage.scale.y = (this.width/this.sceneSize.w);
            // this.stage.pivot.y = -(this.sceneSize.h - this.height)/2
             //this.stage.position.set(window.innerWidth/2, window.innerHeight/2)
         }
@@ -75,12 +75,12 @@ export default class Scene {
             this.pop.setScale(this.stage.scale.x)
         }
 
-        this.stage.y = (this.height - (this.sceneSize.h*this.stage.scale.x))/2
-        this.stage.x = (this.width - (this.sceneSize.w*this.stage.scale.x))/2
+        this.stage.y = ((this.height*window.devicePixelRatio - (this.sceneSize.h*this.stage.scale.x))/2)
+        this.stage.x = ((this.width*window.devicePixelRatio - (this.sceneSize.w*this.stage.scale.x))/2)
 
         this.renderer.view.style.width = this.width + 'px';
         this.renderer.view.style.height = this.height + 'px';
-        this.renderer.resize(this.width, this.height)
+        this.renderer.resize(this.width*window.devicePixelRatio, this.height*window.devicePixelRatio)
     }
 
 }

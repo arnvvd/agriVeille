@@ -18,7 +18,8 @@ export default class Canvas {
             ['../../../static/assets/images/tracteur.png',
             '../../../static/assets/images/boss.jpg'
             ],
-            ['../../../static/assets/images/head-1.png']
+            ['../../../static/assets/images/loader.png',
+            '../../../static/assets/images/head-2.png'],
 
         ]
 
@@ -53,7 +54,8 @@ export default class Canvas {
     nikita(id, slug) {
         this.currentId = id
         if(this.currentId <= this.lastId) {
-            //remove from scene
+            this.pop.removeIllu(this.lastId)
+            this.lastId --
         } else {
             this.pop.addIllu(id, slug); 
             this.lastId ++ 

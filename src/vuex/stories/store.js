@@ -10,8 +10,8 @@ import actionList from './actions';
 
 /* State */
 const state = {
-    datasFetched: false,
-    isOnboarded: false,
+    datasFetched: true,
+    isOnboarded: true,
     isEnded: false,
     isAnimated: false,
     digitalValue: 1,
