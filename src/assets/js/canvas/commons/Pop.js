@@ -10,11 +10,13 @@ class Pop {
     constructor(opt) {
         this.urls = opt.urls
         this.loader = PIXI.loader
+        this.loader.reset()
         this.stage = opt.stage
         this.currentIllu = 0
         this.resources = opt.resources
         this.illus = []
         this.stories = opt.stories
+        this.currentStory = opt.currentStory
 
         this.config = {
             "alpha": {
@@ -62,6 +64,8 @@ class Pop {
             
         }
 
+     
+
         this.loader.load(()=> {
             this.initParticleEmitter()
         })
@@ -84,6 +88,13 @@ class Pop {
 
         //this.particlesEmitter.updateOwnerPos(window.innerWidth / 2, window.innerHeight / 2);
         this.particlesEmitter.emit = false
+
+        if(this.currentStory ) {
+            for(let i = 1; i<this.currentStory+1;i++){
+                //console.log('ok')
+                this.addIllu(i, 'hello')
+            }
+        }
     }
 
    
@@ -107,6 +118,7 @@ class Pop {
 
     addIllu(id, slug) {
         if(!this.particlesEmitter) return;
+        console.log('sdfdsfgdsgf')
         for(let i = 0; i < this.stories[id-1].length; i++) {
             console.log(this.stories)
             this.particlesEmitter.emitterLifetime = 0.200*this.stories[id-1].length

@@ -6,10 +6,10 @@ import interactiveParticle from './commons/interactiveParticle.js';
 
 export default class Canvas {
 
-    constructor( _container ) {
+    constructor( _container, opt ) {
 
         this.container = _container;
-
+        this.currentStory = opt.currentStory
         const w = window.innerWidth;
         const h = window.innerHeight;
         this.scene = new Scene( w, h );
@@ -30,7 +30,7 @@ export default class Canvas {
 
         this.loader.loader.onComplete.add(()=> {
            this.resources = this.loader.loader.resources
-           this.pop = new Pop({urls:['../../../static/assets/images/CartoonSmoke.png'], stage: this.scene.stage, resources:this.resources, stories: this.urls})
+           this.pop = new Pop({urls:['../../../static/assets/images/CartoonSmoke.png'], stage: this.scene.stage, resources:this.resources, stories: this.urls, currentStory: this.currentStory})
 
         })
 

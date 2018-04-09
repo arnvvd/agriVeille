@@ -73,7 +73,7 @@
             this.DELTA_TIME = 0;
             this.LAST_TIME = Date.now();
 
-            this.canvas = new Canvas(this.el);
+            this.canvas = new Canvas(this.el, {currentStory: 2});
             this.canvas.attachToContainer();
 
             this.bindEvents();
