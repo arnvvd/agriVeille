@@ -37,7 +37,6 @@
             }
         },
         mounted() {
-            console.log(this.story);
             this.calcSectionsPosition();
         }
     }

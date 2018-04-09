@@ -1,6 +1,5 @@
 <template>
     <article v-if="story" class="article">
-
         <header class="article__header">
             <div class="article__banner">
                 <router-link :to="{name: 'home'}">
@@ -24,6 +23,7 @@
                 </div>
             </div>
             <article-profile></article-profile>
+            <timeline :story="story"></timeline>
         </div>
     </article>
 </template>
@@ -32,6 +32,7 @@
     import banner from '../../static/assets/svg/banner.svg'
 
     import ArticleProfile from '@/00_components/ArticleProfile.vue';
+    import Timeline from '@/00_components/Timeline.vue';
     import ScrollActive from '@/assets/js/classes/ScrollActive.js';
 
     /* Import Action STORE*/
@@ -44,7 +45,8 @@
             }
         },
         components: {
-            ArticleProfile
+            ArticleProfile,
+            Timeline
         },
         methods: {
             initScrollClasses: () => {

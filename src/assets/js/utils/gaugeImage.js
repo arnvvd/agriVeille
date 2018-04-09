@@ -2,7 +2,7 @@ import head1 from '../../../../static/assets/images/head-1.png'
 import head2 from '../../../../static/assets/images/head-2.png'
 import head3 from '../../../../static/assets/images/head-3.png'
 import head4 from '../../../../static/assets/images/head-4.png'
-import head5 from '../../../../static/assets/images/head-6.png'
+import head5 from '../../../../static/assets/images/head-5.png'
 import head6 from '../../../../static/assets/images/head-6.png'
 
 
