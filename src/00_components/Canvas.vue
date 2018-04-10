@@ -27,6 +27,16 @@
             ...mapGetters(['getCurrentStory'])
         },
         methods: {
+            
+            initCanvas(id) {
+                // Root
+                this.el = document.body.querySelector('.canvas');
+                this.DELTA_TIME = 0;
+                this.LAST_TIME = Date.now();
+                this.canvas = new Canvas(this.el, {currentStory: id});
+                this.canvas.attachToContainer();
+            },
+
             bindEvents() {
                 Emitter.on(CANVAS_CLICK, this.canvasClick = (args) => {
                     router.push({ name: 'article', params: { storySlug: args.slug }})
@@ -67,16 +77,15 @@
             }
         },
         mounted() {
-            // Root
-            this.el = document.body.querySelector('.canvas');
-
-            this.DELTA_TIME = 0;
-            this.LAST_TIME = Date.now();
-
-            this.canvas = new Canvas(this.el, {currentStory: 2});
-            this.canvas.attachToContainer();
+            
+            if (this.getCurrentStory) {
+                this.initCanvas(this.getCurrentStory.id);
+            } else {
+                this.initCanvas(0);
+            }
 
             this.bindEvents();
+            
         },
 
         beforeDestroy() {
@@ -100,5 +109,6 @@
         width: 100vw;
         height: 100vh;
         z-index: 0;
+        background: rgba(248, 203, 93, 1);
     } 
 </style>

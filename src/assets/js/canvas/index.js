@@ -48,7 +48,7 @@ export default class Canvas {
         this.interactiveParticle.position.y = this.scene.renderer.height/2;
         this.scene.addChild( this.interactiveParticle );
 
-        this.lastId = 0
+        this.lastId = this.currentStory
     }
 
     nikita(id, slug) {

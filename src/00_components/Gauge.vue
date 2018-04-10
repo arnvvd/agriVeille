@@ -29,14 +29,30 @@
                 'getPercentValue'
             ])
         },
+        methods: {
+            setHead(id) {
+                this.image = getHead(id);
+            },
+            setGaugeValue(value) {
+                const el = this.$el.querySelector('.gauge__indicator__value');
+                el.style.transform = `translateY(${100 - (value * 100)}%)`;
+            }
+        },
+        mounted() {
+            if (this.getDigitalValue) {
+                this.setHead(this.getDigitalValue);
+            } 
+
+            if (this.getPercentValue) {
+                this.setGaugeValue(this.getPercentValue);
+            }
+        },
         watch: {
             getDigitalValue(val) {
-                console.log(val);
-                this.image = getHead(val);
+                this.setHead(val);
             }, 
             getPercentValue(val) {
-                const el = this.$el.querySelector('.gauge__indicator__value');
-                el.style.transform = `translateY(${100 - (val * 100)}%)`;
+                this.setGaugeValue(val);
             }
         }
     }
