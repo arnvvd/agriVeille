@@ -12,12 +12,16 @@ class Loader {
         return new Promise(resolve => {
             let count = 0
             for(let i = 0; i<this.urls.length; i++) {
-                this.loader.add('illu'+i, this.urls[i])
                
-                count ++
-                if(count == this.urls.length) {
-                    resolve()
+                for(let j = 0; j<this.urls[i].length; j++) {
+                    this.loader.add('illu'+i+j, this.urls[i][j])
+               
+                    count ++
+                    if(count == this.urls.length) {
+                        resolve()
+                    }
                 }
+               
             }   
         })    
     }

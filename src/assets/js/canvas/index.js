@@ -6,22 +6,31 @@ import interactiveParticle from './commons/interactiveParticle.js';
 
 export default class Canvas {
 
-    constructor( _container ) {
+    constructor( _container, opt ) {
 
         this.container = _container;
-
+        this.currentStory = opt.currentStory
         const w = window.innerWidth;
         const h = window.innerHeight;
         this.scene = new Scene( w, h );
         
+        this.urls = [
+            ['../../../static/assets/images/tracteur.png',
+            '../../../static/assets/images/boss.jpg'
+            ],
+            ['../../../static/assets/images/loader.png',
+            '../../../static/assets/images/head-2.png'],
+
+        ]
+
         this.loader = new Loader()
-        this.loader.addInLoader(['../../../static/assets/images/tracteur.png']).then( ()=> {
+        this.loader.addInLoader(this.urls).then( ()=> {
            this.loader.load()
         })
 
         this.loader.loader.onComplete.add(()=> {
            this.resources = this.loader.loader.resources
-           this.pop = new Pop({urls:['../../../static/assets/images/CartoonSmoke.png'], stage: this.scene.stage, resources:this.resources})
+           this.pop = new Pop({urls:['../../../static/assets/images/CartoonSmoke.png'], stage: this.scene.stage, resources:this.resources, stories: this.urls, currentStory: this.currentStory})
 
         })
 
@@ -39,11 +48,19 @@ export default class Canvas {
         this.interactiveParticle.position.y = this.scene.renderer.height/2;
         this.scene.addChild( this.interactiveParticle );
 
+        this.lastId = this.currentStory
     }
 
     nikita(id, slug) {
-        console.log(id);
-        console.log(slug);
+        this.currentId = id
+        if(this.currentId <= this.lastId) {
+            this.pop.removeIllu(this.lastId)
+            this.lastId --
+        } else {
+            this.pop.addIllu(id, slug); 
+            this.lastId ++ 
+        }
+        
     }
 
     attachToContainer() {

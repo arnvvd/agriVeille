@@ -1,13 +1,22 @@
 import {TweenLite} from 'gsap'
+import Emitter from '@/core/eventemitter.js'; 
+import {
+    CANVAS_CLICK,
+    IS_ANIMATED
+} from '@/core/messages.js';
+
 
 class Pop {
     constructor(opt) {
         this.urls = opt.urls
         this.loader = PIXI.loader
+        this.loader.reset()
         this.stage = opt.stage
         this.currentIllu = 0
         this.resources = opt.resources
         this.illus = []
+        this.stories = opt.stories
+        this.currentStory = opt.currentStory
 
         this.config = {
             "alpha": {
@@ -40,8 +49,8 @@ class Pop {
             },
             "blendMode": "normal",
             "frequency": 0.001,
-            "emitterLifetime": 0.2,
-            "maxParticles": 40,
+            "emitterLifetime": .100,
+            "maxParticles": 100,
             "pos": {
                 "x": 0,
                 "y": 0
@@ -55,7 +64,8 @@ class Pop {
             
         }
 
-        window.addEventListener('click', this.addIllu.bind(this))
+     
+
         this.loader.load(()=> {
             this.initParticleEmitter()
         })
@@ -78,40 +88,92 @@ class Pop {
 
         //this.particlesEmitter.updateOwnerPos(window.innerWidth / 2, window.innerHeight / 2);
         this.particlesEmitter.emit = false
+
+        if(this.currentStory ) {
+            for(let i = 1; i<this.currentStory+1;i++){
+                //console.log('ok')
+                this.addIllu(i, 'hello')
+            }
+        }
     }
 
-    addIllu(e) {
-        let texture = this.resources["illu"+this.currentIllu].texture
+   
+    removeIllu(id) {
+        console.log(this.stage)
+        for(let i = 0; i < this.stories[id-1].length; i++) {
+            setTimeout(()=> {
+                this.particlesEmitter.emit = true;
+                this.particlesEmitter.resetPositionTracking();     
+                this.particlesEmitter.updateOwnerPos(this.stage.children[(this.stage.children.length-1)-i].x, this.stage.children[(this.stage.children.length-1)-i].y);
+            }, i*80)
 
-        let positionScale = {
-            x: ((window.innerWidth/(1046*this.stage.scale.x))*this.stage.scale.x),
-            y:((window.innerHeight/(675*this.stage.scale.x))*this.stage.scale.x)
+            TweenLite.to(this.stage.children[(this.stage.children.length-1)-i], 0.3, {width: 0, height: 0, ease:Back.easeIn.config(1.7), onCompleteScope: this, onComplete:function(){
+                if(i == this.stories[id-1].length -1) {
+                    this.stage.removeChildren(this.stage.children.length - this.stories[id-1].length, this.stage.children.length)
+                    Emitter.emit(IS_ANIMATED, {ok: 'ok'})
+                }   
+            }})
         }
+    }
 
+    addIllu(id, slug) {
         if(!this.particlesEmitter) return;
-        let illu = new PIXI.Sprite(texture)
-     
+        console.log('sdfdsfgdsgf')
+        for(let i = 0; i < this.stories[id-1].length; i++) {
+            console.log(this.stories)
+            this.particlesEmitter.emitterLifetime = 0.200*this.stories[id-1].length
 
-        illu.x = e.layerX/positionScale.x;
-        illu.y = e.layerY/positionScale.y;
-        
-        illu.pivot.set(illu.width/2,illu.height/2)   
-        illu.width = (illu.width/3)
-        illu.height = (illu.height/3)
-        illu.interactive = true 
-        this.stage.addChild(illu)
-        TweenLite.from(illu, 0.3, { ease: Back.easeOut.config(1.7), width: 0, height: 0 });
-        TweenLite.from(illu, .25, { alpha: 0 });
-
-        this.particlesEmitter.emit = true;
-        this.particlesEmitter.resetPositionTracking();     
-        this.particlesEmitter.updateOwnerPos(e.offsetX/positionScale.x || e.layerX/positionScale.x, e.offsetY/positionScale.y || e.layerY/positionScale.y);
+            let pos = {
+                x : Math.random()*window.innerWidth,
+                y: Math.random()*window.innerHeight
+            }
     
-
-        this.illus.push(illu)
-        if(this.currentIllu < this.resources.length-1) {
-            this.currentIllu ++
+            let positionScale = {
+                x: ((window.innerWidth/(1550*this.stage.scale.x))*this.stage.scale.x),
+                y:((window.innerHeight/(1001*this.stage.scale.x))*this.stage.scale.x)
+            }
+    
+         
+            
+            setTimeout(()=> {
+                this.particlesEmitter.emit = true;
+                this.particlesEmitter.resetPositionTracking();     
+                this.particlesEmitter.updateOwnerPos(pos.x/positionScale.x || pos.x/positionScale.x, pos.y/positionScale.y || pos.y/positionScale.y);
+            }, i*80)
+       
+            let texture = this.resources["illu"+(id-1)+i].texture
+    
+           
+            let illu = new PIXI.Sprite(texture)
+         
+            illu.x = pos.x/positionScale.x;
+            illu.y = pos.y/positionScale.y;
+            
+            illu.interactive = true;
+            illu.hitArea = new PIXI.Rectangle(0, 0, illu.width, illu.height);
+       
+            illu.pivot.set(illu.width/2,illu.height/2)   
+            illu.width = (illu.width/3)
+            illu.height = (illu.height/3)
+    
+            illu.click = function (e) {
+               Emitter.emit(CANVAS_CLICK, {slug: slug});                
+            };
+    
+            this.stage.addChild(illu)
+    
+            TweenLite.from(illu, 0.3, { ease: Back.easeOut.config(1.7), width: 0, height: 0, delay: i/10, onCompleteScope: this, onComplete:function() {
+                if(i == this.stories[id-1].length -1) {
+                    Emitter.emit(IS_ANIMATED, {ok: 'ok'})
+                }
+            } });
+            TweenLite.from(illu, .25, { alpha: 0, delay: i/10 });
+    
+    
+            this.illus.push(illu)
         }
+
+       
     }
 }
 

@@ -9,7 +9,8 @@
     import Emitter from '@/core/eventemitter.js'; 
     import {
         WINDOW_RESIZE,
-        CANVAS_CLICK
+        CANVAS_CLICK,
+        IS_ANIMATED
     } from '@/core/messages.js';
 
     /* Vue Imports */
@@ -26,6 +27,16 @@
             ...mapGetters(['getCurrentStory'])
         },
         methods: {
+            
+            initCanvas(id) {
+                // Root
+                this.el = document.body.querySelector('.canvas');
+                this.DELTA_TIME = 0;
+                this.LAST_TIME = Date.now();
+                this.canvas = new Canvas(this.el, {currentStory: id});
+                this.canvas.attachToContainer();
+            },
+
             bindEvents() {
                 Emitter.on(CANVAS_CLICK, this.canvasClick = (args) => {
                     router.push({ name: 'article', params: { storySlug: args.slug }})
@@ -36,6 +47,10 @@
                     this.canvas.height = args.height
                     this.canvas.resize(args.width, args.height);
                 });
+
+                Emitter.on(IS_ANIMATED, this.illuAnimated = (args) => {
+                    this.$store.dispatch('setIsNotAnimated')
+                })
                 
                 if (!this._bindedUpdate) {
                     this._bindedUpdate = this.update.bind(this);
@@ -62,16 +77,15 @@
             }
         },
         mounted() {
-            // Root
-            this.el = document.body.querySelector('.canvas');
-
-            this.DELTA_TIME = 0;
-            this.LAST_TIME = Date.now();
-
-            this.canvas = new Canvas(this.el);
-            this.canvas.attachToContainer();
+            
+            if (this.getCurrentStory) {
+                this.initCanvas(this.getCurrentStory.id);
+            } else {
+                this.initCanvas(0);
+            }
 
             this.bindEvents();
+            
         },
 
         beforeDestroy() {
@@ -81,6 +95,7 @@
         watch: {
             getCurrentStory : function(val) {
                 this.canvas.nikita(val.id, val.slug)
+                this.$store.dispatch('setIsAnimated')
             } 
         }
     }
@@ -94,5 +109,6 @@
         width: 100vw;
         height: 100vh;
         z-index: 0;
+        background: rgba(248, 203, 93, 1);
     } 
 </style>
