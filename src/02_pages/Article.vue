@@ -85,7 +85,7 @@
     .article {
         
         &__header {
-            background-color: $main-color;
+            background-color: lighten($main-color, 20%);
         }
 
         &__banner {

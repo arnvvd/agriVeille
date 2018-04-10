@@ -59,7 +59,7 @@
         left: 0;
         width: 100%;
         padding: 5rem 0 6rem;
-        background-color: $white;
+        background-color: $main-color;
 
         &__wrapper {
             position: relative;
@@ -94,20 +94,17 @@
 
             &__indicator {
                 position: absolute;
-                top: -.7rem;
-                width: 1.5rem;
-                height: 1.5rem;
+                top: -.4rem;
+                width: 1rem;
+                height: 1rem;
                 border-radius: 50%;
                 background-color: $black;
-
-                &.is-active {
-                    background-color: $main-color;
-                    transition: background-color .4s $easeCustom;
-                }
+                transition: background-color .4s $easeCustom;
 
                 &:hover {
                     cursor: pointer;
-                    background-color: $main-color;
+                    background-color: darken($main-color, 20%);
+                    transition: background-color .4s $easeCustom;
                 }
 
                 a {

@@ -29,7 +29,7 @@ export default {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: $main-color;
+        background-color: #f8cb5d;
         overflow: hidden;
         z-index: 100;
 

@@ -153,6 +153,7 @@ class Pop {
             illu.y = pos.y/positionScale.y;
             
             illu.interactive = true;
+            illu.buttonMode = true;
             illu.hitArea = new PIXI.Rectangle(0, 0, illu.width, illu.height);
        
             illu.pivot.set(illu.width/2,illu.height/2)   
