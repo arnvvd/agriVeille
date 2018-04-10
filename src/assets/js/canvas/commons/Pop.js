@@ -5,6 +5,8 @@ import {
     IS_ANIMATED
 } from '@/core/messages.js';
 
+import illuPos from '../../utils/illuPos.js'
+
 
 class Pop {
     constructor(opt) {
@@ -17,6 +19,7 @@ class Pop {
         this.illus = []
         this.stories = opt.stories
         this.currentStory = opt.currentStory
+        this.illuPos = illuPos
 
         this.config = {
             "alpha": {
@@ -124,8 +127,8 @@ class Pop {
             this.particlesEmitter.emitterLifetime = 0.200*this.stories[id-1].length
 
             let pos = {
-                x : Math.random()*window.innerWidth,
-                y: Math.random()*window.innerHeight
+                x : illuPos[id-1][i].x*window.innerWidth,
+                y: illuPos[id-1][i].x*window.innerHeight
             }
     
             let positionScale = {
@@ -157,7 +160,7 @@ class Pop {
             illu.height = (illu.height/3)
     
             illu.click = function (e) {
-               Emitter.emit(CANVAS_CLICK, {slug: slug});                
+               Emitter.emit(CANVAS_CLICK, {slug: illuPos[id-1][i].slug});                
             };
     
             this.stage.addChild(illu)

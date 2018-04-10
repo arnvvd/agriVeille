@@ -52,7 +52,7 @@ export default class Scene {
 
         // this.renderer.view.style.width = `${this.width}px`;
         // this.renderer.view.style.height = `${this.height}px`;
-       // console.log(this.renderer)
+          // console.log(this.renderer)
         this.renderer.view.width = this.width
         this.renderer.view.height = this.height
         console.log(this.stage)
