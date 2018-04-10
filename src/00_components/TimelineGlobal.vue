@@ -11,7 +11,7 @@
                     </ul>
                 </li>
                 <li class="timeline__global__wrapper__section__ref">
-                    <p class="timeline__global__wrapper__section__ref__start">Nov.</p>
+                    <p class="timeline__global__wrapper__section__ref__start">Sep.</p>
                     <p class="timeline__global__wrapper__section__ref__section"></p>
                     <p class="timeline__global__wrapper__section__ref__end">Avr.</p>
                 </li>
@@ -72,13 +72,15 @@
     .timeline__global {
         &__wrapper {
             &__section {
+
                 &__item {
-                    margin-bottom: 20px;
+                    margin-bottom: 3rem;
                     &__category {
+                        padding-left: 1.5rem;
                     }
                     &__dates {
-                        width: 75%;
-                        left: 25%;
+                        width: calc(100% - 25rem);
+                        left: 25rem;
                         position: relative;
                         &__date {
                             position: absolute;
@@ -94,28 +96,34 @@
                         }
                     }
                 }
+
                 &__ref {
                     position: relative;
                     height: 30px;
-                    left: 25%;
-                    width: 75%;
+                    left: 25rem;
+                    width: calc(100% - 25rem);
                     &__start {
                         position: absolute;
-                        left: -2.5em;
-                        top: -.7em;
+                        left: 0;
+                        top: 0;
+                        margin: 0;
+                        transform: translateY(-50%)
                     }
                     &__section {
-                        position: absolute;
-                        width: 100%;
+                        width: calc(100% - 8rem);
                         height: 2px;
+                        margin: 0 auto;
                         background: black;
                     }
                     &__end {
                         position: absolute;
-                        right: -2.2em;
-                        top: -.7em;
+                        right: 0;
+                        top: 0;
+                        margin: 0;
+                        transform: translateY(-50%)
                     }
                 }
+
             }
         }
     }

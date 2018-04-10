@@ -1,7 +1,9 @@
 <template>
     <div class="about">
-        <timeline-global v-if="getStories" :stories="getStories"></timeline-global>
-        <reference v-if="getStories" :stories="getStories"></reference>
+        <div class="about__wrapper">
+            <timeline-global v-if="getStories" :stories="getStories"></timeline-global>
+            <reference v-if="getStories" :stories="getStories"></reference>
+        </div>
     </div>
 </template>
 
@@ -31,10 +33,16 @@
 <style lang="scss">
     .about {
         background-color: #e6e5c3; //green
-        padding: 4rem 10%;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        &__wrapper {
+            display: block;
+            margin: 0 auto;
+            max-width: 120rem;
+            padding: 4rem 4rem;
+        }
     }
 </style>

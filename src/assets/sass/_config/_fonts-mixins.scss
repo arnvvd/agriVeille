@@ -39,6 +39,10 @@
   @include font-style ($font: $font-bold, $font-size: 4rem, $weight : 400, $style: italic, $line-height : 50/40);
 }
 
+.heading--5 {
+  @include font-style ($font: $font-bold, $font-size: 2rem, $weight : 400, $style: normal, $line-height : 30/20);
+}
+
 
 .teasing--1 {
   @include font-style ($font: $font-light, $font-size: 2rem, $weight: 400, $style: normal, $line-height: 30/20);
