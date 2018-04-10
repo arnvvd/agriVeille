@@ -3,7 +3,8 @@
         <div class="timeline__wrapper">
             <p class="timeline__start">Nov.</p>
             <ul class="timeline__sections">
-                <li class="timeline__sections__indicator"  v-for="(item, index) in this.sectionComputed" :key="index" v-bind:style="{ left: item.position + '%' }">
+                <li v-bind:class="['timeline__sections__indicator']" v-for="(item, index) in this.sectionComputed" :key="index" v-bind:style="{ left: item.position + '%' }">
+                    <a :href="item.source.link" target="_blank" v-on:mouseenter="addClassActive(index)"  v-on:mouseleave="removeClassActive(index)">&nbsp;</a>
                     <p class="timeline__sections__source">{{item.date}} - {{item.source.title}}</p>
                 </li>
             </ul>
@@ -20,12 +21,19 @@
             return {
                 startDate: moment('01/09/2017','DD/MM/YYYY'),
                 totalDays: 212, // 1st September 2017 to 1st April 2017
-                sectionComputed: []
+                sectionComputed: [],
+                isActive: false
             }
         },
         props: ['story'],
         methods: {
-            calcSectionsPosition(){
+            addClassActive(index) {
+                this.$el.querySelectorAll('.timeline__sections__indicator')[index].classList.add('is-active');
+            },
+            removeClassActive(index) {
+                this.$el.querySelectorAll('.timeline__sections__indicator')[index].classList.remove('is-active');
+            },
+            calcSectionsPosition() {
                 this.story.data.map(item => {
                     const itemDate = moment(item.date,'DD/MM/YYYY');
                     const diffDate = itemDate.diff(this.startDate, 'days');
@@ -50,7 +58,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        padding: 4rem 0;
+        padding: 5rem 0 6rem;
         background-color: $white;
 
         &__wrapper {
@@ -92,9 +100,22 @@
                 border-radius: 50%;
                 background-color: $black;
 
+                &.is-active {
+                    background-color: $main-color;
+                    transition: background-color .4s $easeCustom;
+                }
+
                 &:hover {
                     cursor: pointer;
                     background-color: $main-color;
+                }
+
+                a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
                 }
             }
 
@@ -103,7 +124,16 @@
                 bottom: 1rem;
                 left: 50%;
                 margin: 0;
-                transform: translateX(-50%);
+                opacity: 0;
+                transform: translate(-50%, 1rem);
+                pointer-events: none;
+                transition: all .6s $easeCustom;
+
+                .is-active & {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                    transition: all .6s $easeCustom;
+                }
             }
         }
     }

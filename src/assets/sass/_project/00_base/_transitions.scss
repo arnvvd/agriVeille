@@ -93,3 +93,20 @@
     opacity: 1;
     transition: all .6s $easeCustom;
 }
+
+
+
+/*********************/
+/****** Timeline ******/
+/*********************/
+.transition-timeline-enter-active {
+    transition: all .3s ease .4s;
+}
+.transition-timeline-leave-active {
+    transition: all .4s ease;
+}
+.transition-timeline-enter, .transition-timeline-leave-to
+    /* .slide-fade-leave-active for <2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+}

@@ -23,7 +23,9 @@
                 </div>
             </div>
             <article-profile></article-profile>
-            <timeline :story="story"></timeline>
+            <transition name="transition-timeline">
+                <timeline v-if="story" :story="story"></timeline>
+            </transition> 
         </div>
     </article>
 </template>
