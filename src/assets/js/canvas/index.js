@@ -1,8 +1,6 @@
 import Scene from './commons/Scene.js';
-import Particle from './commons/Particle.js';
 import Pop from './commons/Pop.js'
 import Loader from './commons/Loader'
-import interactiveParticle from './commons/interactiveParticle.js';
 
 export default class Canvas {
 
@@ -33,20 +31,6 @@ export default class Canvas {
            this.pop = new Pop({urls:['../../../static/assets/images/CartoonSmoke.png'], stage: this.scene.stage, resources:this.resources, stories: this.urls, currentStory: this.currentStory})
 
         })
-
-        // Default particle
-        this.particle = new Particle();
-        this.particle.position.x = this.scene.renderer.width/2;
-        this.particle.position.y = this.scene.renderer.height/2;
-        this.scene.addChild( this.particle );
-
-        // Interactive particle
-        this.interactiveParticle = new interactiveParticle({
-            slug: "agriculture-connecte"
-        });
-        this.interactiveParticle.position.x = this.scene.renderer.width/3;
-        this.interactiveParticle.position.y = this.scene.renderer.height/2;
-        this.scene.addChild( this.interactiveParticle );
         
         this.lastId = this.currentStory
     }
