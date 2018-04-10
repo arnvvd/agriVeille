@@ -50,17 +50,20 @@ export default {
     .article { 
 
         &__profile {
-
             position: absolute;
             top: 4rem;
             left: 4rem;
-            max-width: 30rem;
+            max-width: 23rem;
+
+            @include mq($from:'xlarge') {
+                left: calc(50% - 43rem);
+                max-width: 30rem;
+                padding-right: 7rem;
+                transform: translateX(-100%);
+            }
 
             &.is-sticked {
                 position: fixed;
-                top: 4rem;
-                left: 4rem;
-                max-width: 30rem;
             }
 
             &__header {

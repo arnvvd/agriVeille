@@ -100,14 +100,20 @@
 
         &__content {
             position: relative;
-            max-width: 168rem;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 4rem;
+            padding: 4rem 0 14rem;
 
             &--left {
-                max-width: 128rem;
-                padding-left: 38rem;
+                max-width: 124rem;
+                padding-left: 34rem;
                 padding-right: 4rem;
+
+                @include mq($from:'xlarge') {
+                    max-width: 86rem;
+                    padding: 0;
+                    margin: 0 auto;
+                }
             }
         }
 
@@ -154,8 +160,8 @@
             &__list {
                 li {
                     opacity: 0;
-                    transform: translateY(10rem);
-                    margin-bottom: 10rem;
+                    transform: translateY(7rem);
+                    margin-bottom: 7rem;
                     transition: opacity 1s $easeCustom, transform .6s $easeCustom;
 
                     &:first-child {
