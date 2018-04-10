@@ -13,6 +13,8 @@ export default class Scene {
             w: 1550,
             h:1001
         }
+        this.scaleOffset = 1.
+
         this.stage = new PIXI.Container();
 
         this.bg = new PIXI.Sprite.fromImage('../../../../static/assets/images/scene2.png')
@@ -55,8 +57,14 @@ export default class Scene {
         this.renderer.view.height = this.height
         console.log(this.stage)
         //console.log(this.stage)
+        if(window.devicePixelRatio == 2) {
+            this.scaleOffset = 1.5
+        } else {
+            this.scaleOffset = 1.
+        }
+
         if (this.height / this.sceneSize.h < this.width / this.sceneSize.w) {
-            this.stage.scale.x = this.stage.scale.y =  (this.height/this.sceneSize.h);
+            this.stage.scale.x = this.stage.scale.y =  (this.height/this.sceneSize.h)*this.scaleOffset;
 
             
             // this.stage.pivot.x = (this.sceneSize.w - this.width)/2
@@ -66,7 +74,7 @@ export default class Scene {
         } else {
            
 
-            this.stage.scale.x = this.stage.scale.y = (this.width/this.sceneSize.w);
+            this.stage.scale.x = this.stage.scale.y = (this.width/this.sceneSize.w)*this.scaleOffset;
            // this.stage.pivot.y = -(this.sceneSize.h - this.height)/2
             //this.stage.position.set(window.innerWidth/2, window.innerHeight/2)
         }
@@ -75,8 +83,8 @@ export default class Scene {
             this.pop.setScale(this.stage.scale.x)
         }
 
-        this.stage.y = ((this.height*window.devicePixelRatio - (this.sceneSize.h*this.stage.scale.x))/2)
-        this.stage.x = ((this.width*window.devicePixelRatio - (this.sceneSize.w*this.stage.scale.x))/2)
+        this.stage.y = ((this.height*window.devicePixelRatio - (this.sceneSize.h*this.stage.scale.x))/2.)
+        this.stage.x = ((this.width*window.devicePixelRatio - (this.sceneSize.w*this.stage.scale.x))/2.)
 
         this.renderer.view.style.width = this.width + 'px';
         this.renderer.view.style.height = this.height + 'px';
