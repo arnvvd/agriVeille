@@ -33,7 +33,9 @@
                 this.el = document.body.querySelector('.canvas');
                 this.DELTA_TIME = 0;
                 this.LAST_TIME = Date.now();
-                this.canvas = new Canvas(this.el, {currentStory: id});
+                this.canvas = new Canvas(this.el, {
+                    currentStory: id
+                });
                 this.canvas.attachToContainer();
             },
 
@@ -77,8 +79,7 @@
             }
         },
         mounted() {
-            
-            if (this.getCurrentStory) {
+            if (this.getCurrentStory.id) {
                 this.initCanvas(this.getCurrentStory.id);
             } else {
                 this.initCanvas(0);

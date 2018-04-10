@@ -47,7 +47,7 @@ export default class Canvas {
         this.interactiveParticle.position.x = this.scene.renderer.width/3;
         this.interactiveParticle.position.y = this.scene.renderer.height/2;
         this.scene.addChild( this.interactiveParticle );
-
+        
         this.lastId = this.currentStory
     }
 
