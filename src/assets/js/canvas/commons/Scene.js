@@ -10,14 +10,14 @@ export default class Scene {
         
         this.children = [];
         this.sceneSize = {
-            w: 1550,
-            h:1001
+            w: 3100,
+            h:2000
         }
         this.scaleOffset = 1.
 
         this.stage = new PIXI.Container();
 
-        this.bg = new PIXI.Sprite.fromImage('../../../../static/assets/images/scene2.png')
+        this.bg = new PIXI.Sprite.fromImage('../../../../static/assets/images/SceneHigh2.png')
         this.stage.addChild(this.bg)
         this.renderer = new PIXI.WebGLRenderer( this.sceneSize.w*window.devicePixelRatio, this.sceneSize.h*window.devicePixelRatio, { transparent: true } );
         this.resize(window.innerWidth, window.innerHeight)

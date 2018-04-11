@@ -128,12 +128,12 @@ class Pop {
 
             let pos = {
                 x : illuPos[id-1][i].x*window.innerWidth,
-                y: illuPos[id-1][i].x*window.innerHeight
+                y: illuPos[id-1][i].y*window.innerHeight
             }
     
             let positionScale = {
-                x: ((window.innerWidth/(1550*this.stage.scale.x))*this.stage.scale.x),
-                y:((window.innerHeight/(1001*this.stage.scale.x))*this.stage.scale.x)
+                x: ((window.innerWidth/(3100*this.stage.scale.x))*this.stage.scale.x),
+                y:((window.innerHeight/(2000*this.stage.scale.x))*this.stage.scale.x)
             }
     
          
@@ -157,8 +157,8 @@ class Pop {
             illu.hitArea = new PIXI.Rectangle(0, 0, illu.width, illu.height);
        
             illu.pivot.set(illu.width/2,illu.height/2)   
-            illu.width = (illu.width/3)
-            illu.height = (illu.height/3)
+            illu.width = (illu.width)
+            illu.height = (illu.height)
     
             illu.click = function (e) {
                Emitter.emit(CANVAS_CLICK, {slug: illuPos[id-1][i].slug});                

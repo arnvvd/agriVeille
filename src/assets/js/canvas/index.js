@@ -13,11 +13,11 @@ export default class Canvas {
         this.scene = new Scene( w, h );
         
         this.urls = [
-            ['../../../static/assets/images/tracteur.png',
-            '../../../static/assets/images/boss.jpg'
+            ['../../../static/assets/images/test1.png',
+            '../../../static/assets/images/test2.png'
             ],
-            ['../../../static/assets/images/loader.png',
-            '../../../static/assets/images/head-2.png'],
+            ['../../../static/assets/images/test3.png',
+            '../../../static/assets/images/tracteur.png'],
 
         ]
 
