@@ -5,8 +5,9 @@
                 <li class="timeline__global__wrapper__section__item" v-for="(category, index) in this.timelineStory" :key="index">
                     <div class="timeline__global__wrapper__section__item__category">{{category.title}}</div>
                     <ul class="timeline__global__wrapper__section__item__dates">
-                        <li class="timeline__global__wrapper__section__item__dates__date" v-for="(item, key) in category.itemArr" :key="key" v-bind:style="{left: item.left + '%'}">
-                            <!--{{item.date}}-->
+                        <li v-bind:class="['timeline__sections__indicator']" v-for="(item, index) in category.itemArr" :key="index" v-bind:style="{ left: item.left + '%' }">
+                            <a :href="item.source.link" target="_blank" v-on:mouseenter="addClassActive(index)"  v-on:mouseleave="removeClassActive(index)">&nbsp;</a>
+                            <p class="timeline__sections__source">{{item.date}} - {{item.source.title}}</p>
                         </li>
                     </ul>
                 </li>
@@ -35,6 +36,12 @@
         },
         props: ['stories'],
         methods: {
+             addClassActive(index) {
+                this.$el.querySelectorAll('.timeline__sections__indicator')[index].classList.add('is-active');
+            },
+            removeClassActive(index) {
+                this.$el.querySelectorAll('.timeline__sections__indicator')[index].classList.remove('is-active');
+            },
             calcSectionsPosition(){
                 this.stories.map(category => { // add a top position for each category
 
@@ -82,17 +89,13 @@
                         width: calc(100% - 25rem);
                         left: 25rem;
                         position: relative;
-                        &__date {
-                            position: absolute;
-                            top: -1.5rem;
-                            width: 1rem;
-                            height: 1rem;
-                            border-radius: 50%;
-                            background-color: $black;
-                            &:hover {
-                                cursor: pointer;
-                                background-color: $main-color;
-                            }
+                        
+                        .timeline__sections__source {
+                            bottom: 0;
+                            width: 100%;
+                            padding: 3rem;
+                            text-align: center;
+                            background-color: $white;
                         }
                     }
                 }
@@ -123,7 +126,56 @@
                         transform: translateY(-50%)
                     }
                 }
+            }
+        }
+    }
 
+    .timeline {
+        &__sections {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background-color: $black;
+
+            &__indicator {
+                position: absolute;
+                top: -.4rem;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 50%;
+                background-color: $black;
+                transition: background-color .4s $easeCustom;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: darken($main-color, 20%);
+                    transition: background-color .4s $easeCustom;
+                }
+
+                a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &__source {
+                position: fixed;
+                bottom: 1rem;
+                left: 50%;
+                margin: 0;
+                opacity: 0;
+                transform: translate(-50%, 1rem);
+                pointer-events: none;
+                transition: all .6s $easeCustom;
+
+                .is-active & {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                    transition: all .6s $easeCustom;
+                }
             }
         }
     }
