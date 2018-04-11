@@ -143,12 +143,13 @@
                 width: 1rem;
                 height: 1rem;
                 border-radius: 50%;
-                background-color: $black;
+                background-color: $main-color;
+                border: 2px solid $black;
                 transition: background-color .4s $easeCustom;
 
                 &:hover {
                     cursor: pointer;
-                    background-color: darken($main-color, 20%);
+                    background-color: darken($main-color, 50%);
                     transition: background-color .4s $easeCustom;
                 }
 

@@ -42,7 +42,7 @@
             display: block;
             margin: 0 auto;
             max-width: 120rem;
-            padding: 4rem 4rem;
+            padding: 10rem 4rem;
         }
     }
 </style>

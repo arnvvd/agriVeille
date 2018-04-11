@@ -59,7 +59,7 @@
         left: 0;
         width: 100%;
         padding: 5rem 0 6rem;
-        background-color: $main-color;
+        background-color: #fce7c3;
 
         &__wrapper {
             position: relative;
@@ -98,12 +98,13 @@
                 width: 1rem;
                 height: 1rem;
                 border-radius: 50%;
-                background-color: $black;
+                background-color: $main-color;
+                border: 2px solid $black;
                 transition: background-color .4s $easeCustom;
 
                 &:hover {
                     cursor: pointer;
-                    background-color: darken($main-color, 20%);
+                    background-color: darken($main-color, 50%);
                     transition: background-color .4s $easeCustom;
                 }
 
@@ -118,7 +119,7 @@
 
             &__source {
                 position: fixed;
-                bottom: 1rem;
+                bottom: 2rem;
                 left: 50%;
                 margin: 0;
                 opacity: 0;

@@ -81,7 +81,7 @@
             height: 34.4rem;
             border: 2px solid $black;
             border-radius: 1.5rem;
-            background-color: $white;
+            background-color: #fdf0d1;
             transform: translateX(-50%);
             overflow: hidden;
 

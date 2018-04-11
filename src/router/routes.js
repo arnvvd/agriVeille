@@ -7,21 +7,26 @@ const routes = [
         path: '/', 
         name: 'home',
         component: Home,
-        meta: {}
+        meta: {
+            back: false
+        }
     },
     { 
         path: '/about', 
         name: 'about',
         component: About,
         meta: {
-            transition: 'transition-about'
+            transition: 'transition-about',
+            back: true
         } 
     },
     { 
         path: '/article/:storySlug', 
         name: 'article',
         component: Article,
-        meta: {} 
+        meta: {
+            back: true
+        } 
     }
 ];
 
