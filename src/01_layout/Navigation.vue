@@ -1,7 +1,7 @@
 <template>
     <nav class="nav nav--main">
         <ul>
-            <li  class="nav__item nav__item--left" v-if="isBack">
+            <li class="nav__item nav__item--left heading--6" v-if="isBack">
                 <router-link :to="{name: 'home'}">
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.29 57.62">
@@ -11,7 +11,7 @@
                     <span>Retour</span>
                 </router-link>
             </li>
-            <li class="nav__item nav__item--right" >
+            <li class="nav__item nav__item--right heading--6" >
                  <router-link :to="{name: 'about'}">About</router-link>
             </li>
         </ul>
@@ -45,8 +45,8 @@ export default {
             top: 0;
             right: 0;
             z-index: 1;
-            margin: 4rem;
-            width: calc(100% - 8rem);
+            margin: 4rem 6rem;
+            width: calc(100% - 12rem);
         }
 
         &__item {

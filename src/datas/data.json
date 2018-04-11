@@ -7,6 +7,8 @@
                 {
                     "source": {
                         "title": "Wireless IoT Devices in Agriculture Reached 17 million",
+                        "media": "Nom du média / site de référence",
+                        "mediaLink": "#",
                         "link": "https://talkiot.co.za/2017/11/30/wireless-iot-devices-agriculture-reached-17-million/"
                     },
                     "date": "30/11/2017",
@@ -15,6 +17,8 @@
                 },
                 {   "source": {
                         "title": "Quatre nouveaux capteurs pour l’agriculture conçus en un week-end",
+                        "media": "Nom du média / site de référence",
+                        "mediaLink": "#",
                         "link": "https://www.terre-net.fr/materiel-agricole/reportage/article/4-nouveaux-capteurs-pour-l-agriculture-concus-en-un-week-end-213-132839.html"
                 },
                     "date": "04/12/2017",
@@ -24,6 +28,8 @@
                 {
                     "source": {
                         "title": "Des robots pour réduire la pénibilité des travaux agricoles présentés à Toulouse",
+                        "media": "Nom du média / site de référence",
+                        "mediaLink": "#",
                         "link": "https://france3-regions.francetvinfo.fr/occitanie/haute-garonne/toulouse/robots-reduire-penibilite-travaux-agricoles-presentes-toulouse-1378831.html"
                     },
                     "date": "06/12/2017",
@@ -33,6 +39,8 @@
                 {
                     "source": {
                         "title": "Agriculture startups turn to AI, IoT to boost production",
+                        "media": "Nom du média / site de référence",
+                        "mediaLink": "#",
                         "link": "http://www.financialexpress.com/industry/agriculture-startups-turn-to-ai-iot-to-boost-production/971429/"
                     },
                     "date": "13/12/2017",
@@ -42,6 +50,8 @@
                 {
                     "source": {
                         "title": "L’Agtu de février 2018 !",
+                        "media": "Nom du média / site de référence",
+                        "mediaLink": "#",
                         "link": "http://www.lafermedigitale.fr/newsletter-lagtu-de-fevrier-2018-2/"
                     },
                     "date": "14/02/2018",
@@ -51,6 +61,8 @@
                 {
                     "source": {
                         "title": "Soon you’ll be able to ask an agrirobot: How do you like them apples?",
+                        "media": "Nom du média / site de référence",
+                        "mediaLink": "#",
                         "link": "https://newfoodeconomy.org/ai-farm-abundant-robotics-bext360/"
                     },
                     "date": "20/02/2018",
@@ -68,6 +80,8 @@
                 {
                     "source": {
                     "title": "E-agriculture: Copeeks, la start-up de Lannion, sera présente au Space",
+                    "media": "Nom du média / site de référence",
+                    "mediaLink": "#",
                     "link": "https://www.ouest-france.fr/bretagne/lannion-22300/e-agriculture-copeeks-la-start-de-lannion-sera-presente-au-space-5227437"
                 },
                     "date": "07/09/2017",
@@ -76,6 +90,8 @@
                 },
                 {   "source": {
                     "title": "Kerhis : « On l’oublie souvent, mais le monde agricole a été connecté bien avant les consommateurs »",
+                    "media": "Nom du média / site de référence",
+                    "mediaLink": "#",
                     "link": "http://www.bretagne-bretons.fr/kerhis-on-loublie-souvent-monde-agricole-a-ete-connecte-bien-consommateurs/"
                 },
                     "date": "01/12/2017",
@@ -85,6 +101,8 @@
                 {
                     "source": {
                         "title": "Les énergies renouvelables, opportunité de revenus pour les agriculteurs",
+                        "media": "Nom du média / site de référence",
+                        "mediaLink": "#",
                         "link": "http://www.web-agri.fr/actualite-agricole/economie-social/article/les-energies-renouvelables-opportunite-de-revenus-pour-les-agriculteurs-1142-135363.html"
                     },
                     "date": "22/02/2018",
@@ -94,6 +112,8 @@
                 {
                     "source": {
                         "title": "[FW Radar] Sencrop, la station connectée pour les agriculteurs",
+                        "media": "Nom du média / site de référence",
+                        "mediaLink": "#",
                         "link": "https://www.frenchweb.fr/fw-radar-sencrop-la-station-connectee-pour-les-agriculteurs/317974"
                     },
                     "date": "28/02/2018",
@@ -103,6 +123,8 @@
                 {
                     "source": {
                         "title": "Salon de l’agriculture : la méthanisation en soutien des exploitations",
+                        "media": "Nom du média / site de référence",
+                        "mediaLink": "#",
                         "link": "https://www.sciencesetavenir.fr/nature-environnement/agriculture/salon-de-l-agriculture-la-methanisation-en-soutien-des-exploitations_121695"
                     },
                     "date": "02/03/2018",

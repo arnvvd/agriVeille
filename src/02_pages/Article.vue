@@ -5,6 +5,7 @@
                 <router-link :to="{name: 'home'}">
                     <img :src="banner" alt="Bannière de John">
                 </router-link>
+                    <img :class="[isPoped ? 'isPoped' : '', 'article__banner__pop']" :src="bannerPop" alt="Bannière pop">
             </div>
         </header>
         <div class="article__wrapper">
@@ -32,6 +33,7 @@
 
 <script>
     import banner from '../../static/assets/svg/banner.svg'
+    import bannerPop from '../../static/assets/svg/banner-pop.svg'
 
     import ArticleProfile from '@/00_components/ArticleProfile.vue';
     import Timeline from '@/00_components/Timeline.vue';
@@ -43,7 +45,9 @@
     export default {
         data () {
             return {
-                banner: banner
+                isPoped: false,
+                banner: banner,
+                bannerPop: bannerPop
             }
         },
         components: {
@@ -74,6 +78,9 @@
             this.initScrollClasses();
         },
         mounted() {
+            setTimeout(() => {
+                this.isPoped = true;
+            }, 1200);
             this.initScrollClasses();
         }
     }
@@ -89,10 +96,25 @@
         }
 
         &__banner {
+            position: relative;
             display: block;
             margin: 0 auto;
             max-width: 120rem;
             padding: 4rem 4rem;
+
+            &__pop {
+                position: absolute;
+                bottom: 3rem;
+                right: 0;
+                width: 20.6rem;
+                height: 15rem;
+                transform: scale(0);
+
+                &.isPoped {
+                    transform: scale(1);
+                    transition: transform .4s $easeOutBack;
+                }
+            }
         }
 
         &__wrapper {

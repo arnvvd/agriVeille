@@ -5,7 +5,7 @@
                 <p class="references__wrapper__category__title heading--5">{{item.title}}</p>
                 <ul class="references__wrapper__category__sources">
                     <li class="references__wrapper__category__sources__item" v-for="(reference, index) in item.data" :key="index">
-                        <a v-bind:href="reference.source.link" target="_blank">{{reference.source.title}}</a>
+                        <a v-bind:href="reference.source.mediaLink" target="_blank">{{reference.source.media}}</a>
                     </li>
                 </ul>
             </div>
@@ -28,6 +28,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            width: 100%;
 
             @include mq($from: 'tablet') {
                 flex-direction: row;
