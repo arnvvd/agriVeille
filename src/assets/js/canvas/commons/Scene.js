@@ -17,7 +17,7 @@ export default class Scene {
 
         this.stage = new PIXI.Container();
 
-        this.bg = new PIXI.Sprite.fromImage('../../../../static/assets/images/SceneHigh2.png')
+        this.bg = new PIXI.Sprite.fromImage('../../../../static/assets/images/sceneHigh.png')
         this.stage.addChild(this.bg)
         this.renderer = new PIXI.WebGLRenderer( this.sceneSize.w*window.devicePixelRatio, this.sceneSize.h*window.devicePixelRatio, { transparent: true } );
         this.resize(window.innerWidth, window.innerHeight)

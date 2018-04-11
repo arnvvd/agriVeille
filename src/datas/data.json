@@ -2,7 +2,7 @@
     "stories": [
         {
             "id": 1,
-            "title": "Agriculture connectée",
+            "title": "Connected agriculture",
             "data": [
                 {
                     "source": {
@@ -10,16 +10,16 @@
                         "link": "https://talkiot.co.za/2017/11/30/wireless-iot-devices-agriculture-reached-17-million/"
                     },
                     "date": "30/11/2017",
-                    "subtitle": "Les objets connectés",
-                    "text": "Aujourd’hui, alors que j’regardais mon émission favorite, L’amour qu’est dans le pré (je vous conseille), v’là mon meilleur copain, ptit Jean qu’a venu me parler de son dernier hobby, les objets connectés. Lui, c’est un fou de tout ce qu’est technologie, c’est lui qui m’a convaincu de mette internet à la maison. Pour que vous me suiviez dans qu’est-ce que je raconte, les objets connectés y m’a dit que c’est des trucs qui font du captage, du stockage, du traitementage et du transmettage de données. Ah qu’ces objets y peuvent discuter avec ton téléphone pour lui dire que par exemple y va pleuvoir demain, pratique le truc ! Et y m’a dit qu’en 2016, la barre des 17 millions d’objets installés a été dépassée et qu’apparemment il devrait y en avoir plus de 27 millions en 2021, rendez-vous compte ! Et ce serait qu’un début parce-que la plupart des exploitations en sont pas équipées… En tout cas, c’est sacrément intéressant ces trucs, je vais creuser le sujet."
+                    "subtitle": "Little Jean showed me connected objects",
+                    "text":"Today as I was watching me favorite show, Love’s in the farm, my friend little Jean came to talk to me about his new hobby. Connected objects. He is mad about all this technology stuff, he’s the one who told me to install the internet in me house. If you don’t follow me, connected objects as he explained to me are used to receive, treat, gather or send data in real time. For example with this stuff my phone will be able to say to the machine “go feed the cows”, or when it’s raining directly cut off the spraying, handy stuff. He told me that in 2016 more than 17 millions connected objects were commercialized and in 2021 it’ll be more than 27 millions, can ye imagine. Anyways, this is pretty interesting, I’ll have to dig in to see what I can do with those connected objects."
                 },
                 {   "source": {
                         "title": "Quatre nouveaux capteurs pour l’agriculture conçus en un week-end",
                         "link": "https://www.terre-net.fr/materiel-agricole/reportage/article/4-nouveaux-capteurs-pour-l-agriculture-concus-en-un-week-end-213-132839.html"
                 },
                     "date": "04/12/2017",
-                    "subtitle": "Les objets connectés",
-                    "text": "Vous devinerez pas ! Cet après-midi, un groupe de jeunes qui débarquent dans la ferme. Y me disent qu’y sont étudiants au campus d’UniLasalle et qu’y veulent me proposer de participer à une réunion pour potasser sur des “capteurs connectés” pour aider les gars comme moi. J’ai dit oui, bien sûr&nbsp;! Hâte d’y aller hein&nbsp;!"
+                    "subtitle": "Study “connected sensors” with UniLassale’s students",
+                    "text":"Y’all never guess. This afternoon a group of younglings came to me farm. Some students from UniLassale campus, they offered me to go to an event to study those “connected sensors” I was talking about a few days ago, to help people like me. Of course I said yes! Can’t wait to be there!"
                 },
                 {
                     "source": {
@@ -27,8 +27,8 @@
                         "link": "https://france3-regions.francetvinfo.fr/occitanie/haute-garonne/toulouse/robots-reduire-penibilite-travaux-agricoles-presentes-toulouse-1378831.html"
                     },
                     "date": "06/12/2017",
-                    "subtitle": "Les objets connectés",
-                    "text": "Ça s’enchaine (se bouscule ?) au portillon en c’moment ! Cette fois, c’est un entreprometteur qu’a venu me présenter un de ses produits : Spoutnic, la grosse casserole avec des roues dont jt’ai parlé ya deux mois qui surveille tes poules. Y m’a aussi dit que je pourrai essayer Ted, une sort’ de machine pour désherber les vignes au Forum International de la Robotique qu’y va se tenir à Toulouse. J’ai pris mes billets !"
+                    "subtitle": "Going to the Forum International de la Robotique!",
+                    "text": "Don’t know what’s going on lately but me porch is full lately. This time it’s a contractor who came to talk to me about his product. Spoutnic, kind of a big metallic stove on wheels with cameras on it to watch me chickens that I present you two months ago. Also told me I could try Ted, kind of machine that allows weeding the vines during the “Forum International de la Robotique” in Toulouse. Need to buy tickets on the internet before it’s too late… How do I fit me cash in that internet?! "
                 },
                 {
                     "source": {
@@ -36,8 +36,8 @@
                         "link": "http://www.financialexpress.com/industry/agriculture-startups-turn-to-ai-iot-to-boost-production/971429/"
                     },
                     "date": "13/12/2017",
-                    "subtitle": "Les objets connectés",
-                    "text": "Raymond, le facteur qui passe ce matin, y m’a lancé un magazine de son vélo ! Ça s’appelle Reussirferme et c’est sacrément bien foutu ce torchon ! Ça parlait de star top high tech en agri et en agro qu’ont réussi à lever 4,4 milliards de dollars pour lancer plein de nouveaux trucs au premier semestre 2017 ! Ils peuvent utiliser des drones ou des satellites pour t’aider, vindieu !"
+                    "subtitle": "I discover ReussirFerme thanks to Raymond",
+                    "text":"This morning, Raymond, the postman, came to give me me mail as usual. Except that today he brought me something other than bills. A magazine called Reussirferme, really interesting piece of paper. It talked about high tech startups in the farm business and how they raised billion dollars to start plenty of new interesting stuff for me farm, like drones or mini satellites or something. "
                 },
                 {
                     "source": {
@@ -45,17 +45,17 @@
                         "link": "http://www.lafermedigitale.fr/newsletter-lagtu-de-fevrier-2018-2/"
                     },
                     "date": "14/02/2018",
-                    "subtitle": "Les objets connectés",
-                    "text": "Y’a Jacob, mon fils aîné qu’a venu me visiter, on est allés faire un tour sur l'ordinateur et il m’a montré un site bien chouette, ça s’appelle La ferme Digitale je crois et tous les mois y font une news l’AgTu (sacré jeu de mots héhé) qui t’informe sur qu’est-ce qu’y se passe. Là ils parlaient d’une appli pour téléphone qui est reliée à des trucs qui captent de la donnée : ça a l’air pas mal !"
+                    "subtitle": "Get the news with La Ferme Digitale!",
+                    "text":"Me oldest lad Jacob, came to visit me today. Told him about me new interest for connected objects to improve me farm. He told me to subscribe to some newsletters on the internet to be informed about everything that’s new. So we found La ferme Digitale, each month they send you the news directly in your virtual mailbox. This month they talked about something on the phone which receives data from plants… Will be checking me virtual mailbox every month now (if I can start the machine by me own)"
                 },
                 {
                     "source": {
                         "title": "Soon you’ll be able to ask an agrirobot: How do you like them apples?",
                         "link": "https://newfoodeconomy.org/ai-farm-abundant-robotics-bext360/"
                     },
-                    "date": "20/02/2018",
-                    "subtitle": "Les objets connectés",
-                    "text": "Depuis toutes ces visites, je dois dire que je m’tâte sérieusement à voir si je peux pas changer deux ou trois trucs dans ma ferme hein, ça me rendrait ben la vie plus facile, nom d’une betterave. Vous pouvez mettre des commentataires pour m’dire qu’est-ce que vous en pensez si ça vous botte hein."
+                    "date": "20/03/2018",
+                    "subtitle": "A few changes in the farm",
+                    "text":"Since I’ve got all those visits, I gotta say I’m seriously thinking about changing a few things in me farm, after all who would blame me for making me life a little bit easier. You can leave me a comment below to let me know your opinion if you want."
                 }
             ]
         },
@@ -63,7 +63,7 @@
 
         {
             "id": 2,
-            "title": "Ferme connectée",
+            "title": "Connected Farm",
             "data": [
                 {
                     "source": {
@@ -71,16 +71,16 @@
                     "link": "https://www.ouest-france.fr/bretagne/lannion-22300/e-agriculture-copeeks-la-start-de-lannion-sera-presente-au-space-5227437"
                 },
                     "date": "07/09/2017",
-                    "subtitle": "Les objets connectés",
-                    "text": "Bon j’vins d’craquer ! Je reviens du Space, c’est l’salon international des productions animales à Rennes et avec mon copain p’tit Jean, on a commandé à la société lannionnaise Copeeks tout un tas de boîtes connectées qui vont m’permettre de suivre à distance le domaine en envoyant des infos à Telegram sur mon portab. Sacrément pratique ces machins !"
+                    "subtitle": "I admit it, I give up",
+                    "text":"Well, I snapped. Just got back from Space, not actual Space, don’t worry, but the “Salon International des productions animales” in Rennes. With me friend Jean, we ordered a bunch of connected boxes to a company named Copeeks. They will allow me to track from distance the field while sending data to Telegram on me phone. These things are damn practicals!"
                 },
                 {   "source": {
                     "title": "Kerhis : « On l’oublie souvent, mais le monde agricole a été connecté bien avant les consommateurs »",
                     "link": "http://www.bretagne-bretons.fr/kerhis-on-loublie-souvent-monde-agricole-a-ete-connecte-bien-consommateurs/"
                 },
                     "date": "01/12/2017",
-                    "subtitle": "Les objets connectés",
-                    "text": "J’vins à peine de raccrocher le téléphone, j’étais en ligne avec Kehris, une boite qui crée des trucs informatiques pratiques pour tous les gens de ma filière, et je leur ai commandé de v’nir bidouiller ma machine pour y mette un prologiciel . Ça va m’aider à planifier tout c’que j’dois faire à l’exploitation parce que je m’en sors pu sinon !"
+                    "subtitle": "Got a new pro-software on me computer",
+                    "text": "Just got off the phone with Kehris, a company which invented these useful softwares for people like me. I asked them to come install a pro-software as they call it, on me computer. It’ll help me plan everything I got to do in me farm. Can’t remember everything at me age."
                 },
                 {
                     "source": {
@@ -88,8 +88,8 @@
                         "link": "http://www.web-agri.fr/actualite-agricole/economie-social/article/les-energies-renouvelables-opportunite-de-revenus-pour-les-agriculteurs-1142-135363.html"
                     },
                     "date": "22/02/2018",
-                    "subtitle": "Les objets connectés",
-                    "text": "Mon banquier il est sympa et il aime ben faire des prêts j’crois ! Tant mieux pace-que sinon j’aurais jamais pu installer les panneaux solaires su’l’toit, et les éoliennes su’l terrain. C’est mon fils cadet Philiibert qu’a m’a convaincu de le faire, il venait de lire une étude de l'Agence de l'environnement et de la maîtrise de l'énergie qu’y dit que ça peut t’rapporter jusqu’à 15 000 pépettes en plus dans l’année ces trucs là. On va pas cracher dessus !"
+                    "subtitle": "My banker likes to do loans",
+                    "text":"Nice guy my banker! Whenever I ask him for money he lends me some haha. We won’t complain, thanks to this I was able to set up solar panels on the roof and wind turbine in the field. It’s my youngest who suggested me to do so. He read a study in L’agence de l’environnement et la maîtrise de l’énergie which said that you can make an extra 15 000 bucks per year whilst helping the environment. Wouldn’t want to miss it, right?"
                 },
                 {
                     "source": {
@@ -97,8 +97,8 @@
                         "link": "https://www.frenchweb.fr/fw-radar-sencrop-la-station-connectee-pour-les-agriculteurs/317974"
                     },
                     "date": "28/02/2018",
-                    "subtitle": "Les objets connectés",
-                    "text": "Sacrénomdedieu, les “capteurs” qu’y m’avaient installés ont pas arrêté de me causer des soucis, un qu’a lâché comme ça, les aut’ qui arrivaient pas à m’envoyer des infos. Résultat j’ai tout dégagé et j’ai fait appel à une aut’ société Sencrop, créée par deux bons gars du Nord. Ils viennent de m’installer des mini “stations agro-météo connectées” comme ils les appellent et ça fonctionne du tonnerre ! Ça t’envoie le taux de pluviométrie, l’hygrométrie, la température de l’air et j’en passe ! Espérons que ça tienne !"
+                    "subtitle": "Got a lot of problems with me sensors",
+                    "text":"Bloody hell, those sensors they’ve installed only caused me troubles, one died just like that, and the other one could not send me any data that I needed. So, I cleared everything and called Sencrop, a small company created by two good fellows from north. They’re currently setting up small connected weather station or something like that, works like a charm. It sends you rainfall rates, hygrometry, temperature and many more. Hope this time it’ll last!"
                 },
                 {
                     "source": {
@@ -106,8 +106,191 @@
                         "link": "https://www.sciencesetavenir.fr/nature-environnement/agriculture/salon-de-l-agriculture-la-methanisation-en-soutien-des-exploitations_121695"
                     },
                     "date": "02/03/2018",
-                    "subtitle": "Les objets connectés",
-                    "text": "Pfiou, c’était un sacré chantier dans le coin ces derniers jours ! Les gars viennent juste de finir la construction de mon méthaniseur : j’y récupère les effluents des élevages du coin, notamment de mon copain P’tit Jean ! C’était pas donné non plus et l’a fallu convaincre tout le monde pace-que les gens y z’avaient peur des odeurs et que le machin explose. Mais bon, c’est réglé maintenant et je pense ben qu’ça va donner des idées aux agriculteurs voisins !"
+                    "subtitle": "A hell of a construction site for the methanisor!",
+                    "text": "Was a hell of a construction site down here the last few days. Guys just finished building my methanisor: with it get water streams from local farmers, including me friend Jean remember. Wasn’t cheap though and I needed to convince everybody. They were scared becaus’ of the smell of the machine or even that it’d explode. Happy it’s done though: maybe local farmers will start to think about digitalising their farms."
+                }
+            ]
+        },
+
+        {
+            "id": 3,
+            "title": "Connected Robots",
+            "data": [
+                {
+                    "source": {
+                    "title": "PROCLEANER X100 : LE ROBOT DE LAVAGE POUR BÂTIMENT D’ÉLEVAGE",
+                    "link": "http://www.techelevage.fr/procleaner-x100-robot-de-nettoyage-batiment-delevage/"
+                },
+                    "date": "04/09/2017",
+                    "subtitle": "Ease the pain of me lads",
+                    "text":"I have a new passion for all the thing linked to smart robots. With my friend little Jean, we discover Pro CleanerX100, a robot for cleaning the livestock buildings. 25 liters per minute the whiz and can reach 35 liters if you have a powerful water pump. It’ll ease the pain of my lads who help me to clean up. They'll have a smile on their face the morning when they come to work with me now!"
+                },
+                {
+                    "source": {
+                    "title": "Agriculture : les robots veillent au gain",
+                    "link": "http://www.liberation.fr/futurs/2017/09/18/agriculture-les-robots-veillent-au-gain_1597264"
+                },
+                    "date": "18/09/2017",
+                    "subtitle": "The ultimate time saver",
+                    "text": "I’ve just buy a new this to make easier the tasks of my guys with the robot Innovado! It’s a device that distributes the fodder automatically. You just have to adjust a few things and it’ll take by himself the feed with the right amount at the right moment. A new way to save time!"
+                },
+                {
+                    "source": {
+                    "title": "Spoutnic prend soin des aviculteurs et de leur porte-monnaie",
+                    "link": "http://www.ac-mag.fr/robotique-agricole/93-spoutnic-prend-soin-des-aviculteurs-et-de-leur-porte-monnaie"
+                },
+                    "date": "10/10/2017",
+                    "subtitle": "Get into the hens breeding with Spoutnic",
+                    "text":"I’ve decided to get into the hen breeding! In order to do things properly, I’ve also invested in a smart robot that has someone introduce me. 7600 euros the device, ouch! They call it  Spoutnic and he looks darn good. If he works well, he will avoid me to check each half hour if the hens laid on the ground. According to the seller, it would be profitable after the second batch of hens. And when he’s tired, you just have to charge him during the night when the chickens sleep."
+                },
+                {
+                    "source": {
+                    "title": "Octopus Robots : roule ma poule",
+                    "link": "http://www.entreprendre.fr/octopus-robots-poule-olivier-somville"
+                },
+                    "date": "04/01/2018",
+                    "subtitle": "A clean shed",
+                    "text":"They have got very funny names these smart robots! The new one is called Octopus. He will clean and disinfect by himself the big shed with his dry fog technology (well, I didn’t understand everything to be honest, but it’s said to be groundbreaking...). A dream coming true!"
+                },
+                {
+                    "source": {
+                    "title": "Naïo Technologies, Le Fleuron De L’AgTech à La Française",
+                    "link": "https://www.forbes.fr/entrepreneurs/naio-technologies-le-fleuron-de-l-agtech-a-la-francaise/"
+                },
+                    "date": "12/01/2018",
+                    "subtitle": "After Octopus, I’ve got Oz",
+                    "text": "Still have a visit today and guess what? A new one again and it’s Oz, a robot built by Ayo technology that helps you to weed, hoe a plot and carry charges."
+                },
+                {
+                    "source": {
+                    "title": "Farm Robotics are Taking a Giant Automated Leap Forward",
+                    "link": "http://www.machinedesign.com/motion-control/farm-robotics-are-taking-giant-automated-leap-forward"
+                },
+                    "date": "26/01/2018",
+                    "subtitle": "I upgraded my tractor for my plants",
+                    "text":"New find, I upgraded my tractor and added a smart robot, the “see and spray” by Blue River. Very genius this device. He recognizes the state of your plants and decides if you need to give them a little boost. Firstly, you save money becaus’ you use less pesticide and secondly, it’s healthier. Not to mention the time you save!"
+                },
+                {
+                    "source": {
+                    "title": "Soon you’ll be able to ask an agrirobot: How do you like them apples?",
+                    "link": "https://newfoodeconomy.org/ai-farm-abundant-robotics-bext360/"
+                },
+                    "date": "20/02/2018",
+                    "subtitle": "I try Apple Picker from Abundant Robotics",
+                    "text":"Another chore to delete : the apples picking with the Apple Picker, a robot built by Abundant Robotics. He recognizes the apples and he sucks them in less than two seconds."
+                },
+                {
+                    "source": {
+                    "title": "Parrot lance un drone pour l’agriculture",
+                    "link": "http://www.lemonde.fr/la-foire-du-drone/article/2018/02/22/parrot-lance-un-drone-pour-l-agriculture_5260936_5037916.html"
+                },
+                    "date": "22/02/2018",
+                    "subtitle": "Need to calm down (but got a drone)",
+                    "text": "Today, I made a new purchase: a drone! The company Parrot has commercialized a drone that can map up to 30 hectares. Then, you can see the state of your crops and see where you need an amount of fertilizer or water. Maybe I’ll calm down me spending fever after that becaus’ my loan is well engaged..."
+                }
+            ]
+        },
+
+        {
+            "id": 4,
+            "title": "Connected Animals",
+            "data": [
+                {
+                    "source": {
+                    "title": "Coho crée l'écurie connectée",
+                    "link": "http://lessor38.fr/coho-un-boitier-pour-ameliorer-le-bien-etre-des-chevaux-20142.html"
+                },
+                    "date": "02/10/2017",
+                    "subtitle": "A new pony for my younger son Phillibert",
+                    "text":"Now, animals! I just purchased a new pony for my younger boy Phillibert, his dream! To make sure the beast stays in good health, I took a connected box with sensors made by Coho that I leave in its shelter. It sends me a bunch of data in your phone to be sure me Phillibert’s pony is healthy!"
+                },
+                {
+                    "source": {
+                    "title": "Cochon connecté : une solution IoT pour la santé animalière",
+                    "link": "https://www.objetconnecte.com/cochon-connecte-elevage/"
+                },
+                    "date": "17/11/2017",
+                    "subtitle": "The good health of my cows",
+                    "text":"Another thing to make the life easier: my cows now have sensors on their ears that send you information to tell you if the beast is healthy, have no stress, or if they are in their fertility period."
+                },
+                {
+                    "source": {
+                    "title": "Cows going online in NZ paddocks",
+                    "link": "http://www.nzherald.co.nz/business/news/article.cfm?c_id=3&objectid=11951232"
+                },
+                    "date": "03/12/2017",
+                    "subtitle": "I can’t leave without connected collar for my cows!",
+                    "text":"Even cows are connected now, I gave in for a 4G collar made by Huawei (who also makes smartphones, you know)  that you put around their neck. As usual, the collar sends a bunch of data about the beast, the temperature and their localization! Can’t leave without this collar!"
+                },
+                {
+                    "source": {
+                    "title": "Insurtech giant ZhongAn plans to use facial recognition, blockchain to monitor chickens",
+                    "link": "http://www.scmp.com/business/companies/article/2123567/blockchain-and-facial-recognition-zhongan-techs-recipe-changing"
+                },
+                    "date": "10/12/2017",
+                    "subtitle": "Give straps to me little hens",
+                    "text":"Discussing with little Jean (me friend), I realized that I did nothing for me hens, so I put strap on them. These straps allow me to know the chicken identity, what they eat and if they do enough activities! Practical, becaus’ buyers want more en more track the origin of what they spent their money for and how they are raised."
+                },
+                {
+                    "source": {
+                    "title": "Meet the “connected cow”",
+                    "link": "https://www.ft.com/content/2db7e742-7204-11e7-93ff-99f383b09ff9"
+                },
+                    "date": "20/12/2017",
+                    "subtitle": "The sensors for me cow’s tails",
+                    "text":"I decided to annoyme cows again, but it’s for their own good: we added sensors on their tails which analyzes their movements to see if anything wrong is going on. It can warn if they are complications during the cows pregnancy and avoid its death! "
+                }
+            ]
+        },
+
+        {
+            "id": 5,
+            "title": "Connected Food",
+            "data": [
+                {
+                    "source": {
+                    "title": "Silence, ça grimpe : l'agriculture urbaine prend son envol",
+                    "link": "https://www.grazia.fr/news-et-societe/societe/silence-ca-grimpe-l-agriculture-urbaine-prend-son-envol-866601"
+                },
+                    "date": "09/09/2017",
+                    "subtitle": "A vertical farming of spinach in me garage",
+                    "text":"Few months ago, I read an article about vertical farming on La Ferme Digitale. I was very enthusiastic and decided to create a vertical farming of spinach in the garage. And guess what? It works like a charm! I just have to adjust the humidity rate, the lighting, the contribution in manure and that’s it!"
+                },
+                {
+                    "source": {
+                    "title": "Gaspillage alimentaire : Quand l’IoT et la blockchain aident les industriels",
+                    "link": "https://www.objetconnecte.com/gaspillage-alimentaire-iot-blockchain/"
+                },
+                    "date": "23/11/2017",
+                    "subtitle": "Follow the transportation with sensors made by Zest Lab",
+                    "text":"Another news! We just put sensors made by Zest Lab on pallets where are the crops. In this way, we can follow if they are well packed during transportation and found where they come from and if the products are damaged!"
+                },
+                {
+                    "source": {
+                    "title": "Une betterave connectée pour affiner le réglage de la machine",
+                    "link": "http://www.lafranceagricole.fr/videos/recolte-une-betterave-connectee-pour-affiner-le-reglage-de-la-machine-1,2,1301089223.html"
+                },
+                    "date": "28/11/2017",
+                    "subtitle": "Growing beetroots in me farm",
+                    "text":"Did I tell you that I start to grow beetroots? In any case, we hav’ got worries becaus’ some beetroots don’t come out very well after their trip in the machine! So me friend little Jean lend me a connected beetroot! You just have to plant with the rest and when you harvest them, it’ll save them from the bumps they’ll have and you can find where the problem comes from. And that’s what we’ve done!"
+                },
+                {
+                    "source": {
+                    "title": "Ce Normand est pionnier de l’agriculture urbaine à New York",
+                    "link": "https://www.ouest-france.fr/normandie/ce-normand-est-pionnier-de-l-agriculture-urbaine-new-york-5441558"
+                },
+                    "date": "12/12/2017",
+                    "subtitle": "Cyril introduce me to aquaponics",
+                    "text":"I meet a nice guy recently, he called Cyril and do vertical farming as well. He also introduced me to aquaponics, an off-ground cultivation where garbage from an element feeds another one (for example fishes that feed plants)."
+                },
+                {
+                    "source": {
+                    "title": "Ce Normand est pionnier de l’agriculture urbaine à New York",
+                    "link": "https://www.alliancy.fr/chroniques/internet-objets-mtom/2018/03/01/les-serres-connectees-un-melange-daquaponie-et-dalgorithme"
+                },
+                    "date": "01/03/2018",
+                    "subtitle": "Invest in a new connected greenhouse",
+                    "text":"I give in again, I just purchase a connected greenhouse made by Myfood to continue me experiences. The machine is well made, you can introduce around 400 kg of vegetables and 40 kg of fishes per year. It’s powered by solar panels and here as well you’ll have a bunch of data sent on your mobile phone, on an app that give you farming’s advices! Very eager to make me first harvest! (8000 euros)"
                 }
             ]
         }

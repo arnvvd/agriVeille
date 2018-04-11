@@ -124,7 +124,7 @@ class Pop {
         console.log('sdfdsfgdsgf')
         for(let i = 0; i < this.stories[id-1].length; i++) {
             console.log(this.stories)
-            this.particlesEmitter.emitterLifetime = 0.200*this.stories[id-1].length
+            this.particlesEmitter.emitterLifetime = 0.050*this.stories[id-1].length
 
             let pos = {
                 x : illuPos[id-1][i].x*window.innerWidth,
