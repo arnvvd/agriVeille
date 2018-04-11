@@ -1,6 +1,5 @@
 <template>
     <div class="home">
-        <h1>{{title}}</h1>
         <home-canvas></home-canvas>
         <gauge></gauge>
         <transition name="transition-onboarding">
@@ -8,7 +7,10 @@
         </transition>
         <transition name="transition-ending">
             <ending v-if="getIsEnded"></ending>
-        </transition> 
+        </transition>
+        <div class="home__category heading--8">
+            {{getCurrentStory.title}}
+        </div> 
     </div>
 </template>
 
@@ -25,7 +27,6 @@ import { mapActions, mapGetters } from 'vuex';
 export default {
     data () {
         return {
-          title: 'Hello Home',
           mousewheelevt: (/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel"
         }
     },
@@ -39,7 +40,8 @@ export default {
         ...mapGetters([
             'getIsOnboarded',
             'getIsEnded',
-            'getIsAnimated'
+            'getIsAnimated',
+            'getCurrentStory'
         ])
     },
     methods: {
@@ -106,5 +108,34 @@ export default {
         padding: 4rem 0;
         min-height: 100vh;
         overflow: hidden;
+
+        &__category {
+            display: inline-block;
+            vertical-align: top;
+            position: fixed;
+            bottom: 3rem;
+            left: 50%;
+            padding: 1rem 3rem;
+            transform: translateX(-50%);
+            background-color: #A5A39F;
+            border: 3px solid #000;
+            border-radius: 10rem;   
+            text-transform: uppercase;
+            z-index: 0;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: calc(100% - .6rem);
+                height: calc(100% - .6rem);
+                background-color: #C9C57A;
+                transform: translate(-50%, -50%);
+                border-radius: 10rem;   
+                z-index: -1;
+            }
+        }
     }
 </style>

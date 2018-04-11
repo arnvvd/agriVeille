@@ -47,6 +47,15 @@
   @include font-style ($font: $font-bold, $font-size: 1.8rem, $weight : 400, $style: normal, $line-height : 28/18);
 }
 
+.heading--7 {
+  @include font-style ($font: $font-bold, $font-size: 1.4rem, $weight : 400, $style: italic, $line-height : 20/14);
+}
+
+.heading--8 {
+  @include font-style ($font: $font-bold, $font-size: 1.8rem, $weight : 400, $style: italic, $line-height : 28/18);
+}
+
+
 
 .teasing--1 {
   @include font-style ($font: $font-light, $font-size: 2rem, $weight: 400, $style: normal, $line-height: 30/20);

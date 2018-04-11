@@ -8,6 +8,7 @@
                 <img :src="image" alt="Loader example">
             </div>
         </div>
+        <p class="gauge__tuto heading--7">Scroll pour digitalisey&nbsp;!</p>
     </div>
 </template>
 
@@ -73,6 +74,16 @@
         border-radius: 2.6rem;
         background-color: $dark-grey;
 
+        &__tuto {
+            position: absolute;
+            width: 10rem;
+            bottom: -8rem;
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+            //animation: blink 2s $easeInOutCubic infinite;
+        }
+
         &__indicator {
             position: absolute;
             top: 1rem;
@@ -130,6 +141,19 @@
                 }
             } 
         } 
+    }
+
+
+     @keyframes blink {
+        0% {
+            opacity: 1
+        }
+        50% {
+            opacity: 0
+        }
+        100% {
+            opacity: 1
+        }
     }
 
 </style>
