@@ -85,7 +85,7 @@
     .article {
         
         &__header {
-            background-color: lighten($main-color, 20%);
+            background-color: $main-color;
         }
 
         &__banner {
@@ -97,7 +97,7 @@
 
         &__wrapper {
             position: relative;
-            background-color: lighten($main-color, 20%);
+            background-color: rgba(248, 203, 93, .3);
         }
 
         &__content {

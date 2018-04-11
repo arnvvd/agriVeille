@@ -110,6 +110,6 @@
         width: 100vw;
         height: 100vh;
         z-index: 0;
-        background: rgba(248, 203, 93, 1);
+        background: rgba(248, 203, 93, .3);
     } 
 </style>
