@@ -150,7 +150,7 @@ let illuPos = [
     slug:'connected-animals'
     },
     {x:0.5894,
-    y:	0.8727,
+    y:	0.08727,
     slug:'connected-animals'
     },
     {x:0.695,

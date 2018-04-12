@@ -103,27 +103,51 @@ class Pop {
    
     removeIllu(id) {
         console.log(this.stage)
+        let realId = id-1
         for(let i = 0; i < this.stories[id-1].length; i++) {
             setTimeout(()=> {
                 this.particlesEmitter.emit = true;
                 this.particlesEmitter.resetPositionTracking();     
+                console.log(this.stage.children[(this.stage.children.length-1)-i])
                 this.particlesEmitter.updateOwnerPos(this.stage.children[(this.stage.children.length-1)-i].x, this.stage.children[(this.stage.children.length-1)-i].y);
-            }, i*80)
+            }, i*50)
 
-            TweenLite.to(this.stage.children[(this.stage.children.length-1)-i], 0.3, {width: 0, height: 0, ease:Back.easeIn.config(1.7), onCompleteScope: this, onComplete:function(){
+            TweenLite.to(this.stage.children[(this.stage.children.length-1)-i], 0.3, {width: 0, height: 0, delay:i*0.05, ease:Back.easeIn.config(1.7), onCompleteScope: this, onComplete:function(){
                 if(i == this.stories[id-1].length -1) {
                     this.stage.removeChildren(this.stage.children.length - this.stories[id-1].length, this.stage.children.length)
                     Emitter.emit(IS_ANIMATED, {ok: 'ok'})
                 }   
             }})
         }
+
+        if(realId == 1) {
+            let base = 2;
+            console.log('ok')
+            for(let i = base; i < this.stories[id-2].length+base; i++) {
+                this.stage.children[i].interactive = true
+            }
+        } else {
+            let base = 2 + this.stories[id-2].length
+            for(let i = base; i < this.stage.children.length; i++) {
+                this.stage.children[i].interactive = true
+            }
+        } 
+        
+       
+    }
+
+
+    removeListener() {
+        for(let i = 0; i < this.stage.children.length; i++) {
+           this.stage.children[i].interactive = false
+        }
     }
 
     addIllu(id, slug) {
         if(!this.particlesEmitter) return;
-        console.log('sdfdsfgdsgf')
+
+        this.removeListener()
         for(let i = 0; i < this.stories[id-1].length; i++) {
-            console.log(this.stories)
             this.particlesEmitter.emitterLifetime = 0.050*this.stories[id-1].length
 
             let pos = {
