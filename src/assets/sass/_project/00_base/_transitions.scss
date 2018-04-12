@@ -9,7 +9,6 @@
 }
 .transition-page-enter, .transition-page-leave-to
     /* .slide-fade-leave-active for <2.1.8 */ {
-    transform: translateX(10px);
     opacity: 0;
 }
 
@@ -25,7 +24,6 @@
 }
 .transition-about-enter, .transition-about-leave-to
     /* .slide-fade-leave-active for <2.1.8 */ {
-    transform: translateY(10px);
     opacity: 0;
 }
 
@@ -70,7 +68,7 @@
     transition: all 1s ease;
 }
 
-.transition-ending-enter, .transition-ending-leave-to { 
+.transition-ending-enter, .transition-ending-leave-to {
     opacity: 0;
 
     .ending__content {

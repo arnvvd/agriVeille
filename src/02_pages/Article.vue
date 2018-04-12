@@ -26,7 +26,7 @@
             <article-profile></article-profile>
             <transition name="transition-timeline">
                 <timeline v-if="story" :story="story"></timeline>
-            </transition> 
+            </transition>
         </div>
     </article>
 </template>
@@ -74,7 +74,7 @@
                 return this.getStoryBySlug(this.$route.params.storySlug);
             }
         },
-        updated() { 
+        updated() {
             this.initScrollClasses();
         },
         mounted() {
@@ -90,7 +90,7 @@
     @import "~styles/main.scss";
 
     .article {
-        
+
         &__header {
             background-color: $main-color;
         }
@@ -119,7 +119,7 @@
 
         &__wrapper {
             position: relative;
-            background-color: rgba(248, 203, 93, .3);
+            background-color: #fdf0d1;
         }
 
         &__content {
@@ -178,7 +178,7 @@
                 text-transform: uppercase;
             }
             &__published {
-                margin: 0; 
+                margin: 0;
             }
 
             &__list {
@@ -205,5 +205,5 @@
                 }
             }
         }
-    } 
+    }
 </style>
