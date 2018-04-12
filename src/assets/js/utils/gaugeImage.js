@@ -7,7 +7,6 @@ import head6 from '../../../../static/assets/images/head-6.png'
 
 
 export default function getHead(id) {
-    console.log(id);
     switch (id) {
         case 1:
             return head1
@@ -20,7 +19,7 @@ export default function getHead(id) {
         case 5:
             return head5
         case 6:
-            return head6        
+            return head6
         default:
             return head1
     }

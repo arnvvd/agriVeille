@@ -89,7 +89,7 @@
                         width: calc(100% - 25rem);
                         left: 25rem;
                         position: relative;
-                        
+
                         .timeline__sections__source {
                             bottom: 0;
                             width: 100%;

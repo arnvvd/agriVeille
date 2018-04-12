@@ -4,38 +4,38 @@ import Article from '@/02_pages/Article.vue'
 import Conclusion from '@/02_pages/Conclusion.vue'
 
 const routes = [
-    { 
-        path: '/', 
+    {
+        path: '/',
         name: 'home',
         component: Home,
         meta: {
             back: false
         }
     },
-    { 
-        path: '/about', 
+    {
+        path: '/about',
         name: 'about',
         component: About,
         meta: {
             transition: 'transition-about',
             back: true
-        } 
+        }
     },
-    { 
-        path: '/article/:storySlug', 
+    {
+        path: '/article/:storySlug',
         name: 'article',
         component: Article,
         meta: {
             back: true
-        } 
+        }
     },
-    { 
-        path: '/conclusion', 
+    {
+        path: '/conclusion',
         name: 'conclusion',
         component: Conclusion,
         meta: {
             back: true
-        } 
+        }
     }
 ];
 
