@@ -1,6 +1,7 @@
 <template>
     <div class="timeline__global">
         <div class="timeline__global__wrapper">
+            <h2 class="references__title heading--1">Timeline</h2>
             <ul class="timeline__global__wrapper__section">
                 <li class="timeline__global__wrapper__section__item" v-for="(category, index) in this.timelineStory" :key="index">
                     <div class="timeline__global__wrapper__section__item__category">{{category.title}}</div>

@@ -1,8 +1,9 @@
 <template>
     <div class="references">
         <div class="references__wrapper">
+            <h2 class="references__title heading--1">Sitography</h2>
             <div class="references__wrapper__category" v-for="(item, index) in this.stories" :key="index">
-                <p class="references__wrapper__category__title heading--5">{{item.title}}</p>
+                <p class="references__wrapper__category__title heading--5">{{index + 1}} - {{item.title}}</p>
                 <ul class="references__wrapper__category__sources">
                     <li class="references__wrapper__category__sources__item" v-for="(reference, index) in item.data" :key="index">
                         <a v-bind:href="reference.source.mediaLink" target="_blank">{{reference.source.media}}</a>
@@ -23,16 +24,15 @@
     @import "~styles/main.scss";
 
     .references {
-        margin-top: 60px;
-        &__wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            width: 100%;
+        margin-top: 8rem;
 
-            @include mq($from: 'tablet') {
-                flex-direction: row;
-            }
+        &__title {
+            padding-left: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        &__wrapper {
+            width: 100%;
 
             &__category {
                 width: 100%;
@@ -40,10 +40,14 @@
                 margin-bottom: 3rem;
 
                 @include mq($from: 'tablet') {
+                    display: inline-block;
+                    vertical-align: top;
                     width: 50%;
                 }
 
                 @include mq($from: 'desktop') {
+                    display: inline-block;
+                    vertical-align: top;
                     width: 33.33%;
                 }
 
@@ -81,6 +85,14 @@
                             position: relative;
                             left: -.5rem;
                             padding-right: 5px;
+                        }
+                        a{
+                            transition: color .4s $easeCustom;
+
+                            &:hover {
+                                color: $main-color;
+                                transition: color .4s $easeCustom;
+                            }
                         }
                     }
                 }
