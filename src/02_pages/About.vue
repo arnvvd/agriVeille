@@ -3,6 +3,7 @@
         <div class="about__wrapper">
             <timeline-global v-if="getStories" :stories="getStories"></timeline-global>
             <reference v-if="getStories" :stories="getStories"></reference>
+            <team></team>
         </div>
     </div>
 </template>
@@ -12,6 +13,7 @@
     import { mapGetters } from 'vuex';
     import TimelineGlobal from '@/00_components/TimelineGlobal.vue';
     import Reference from '@/00_components/Reference.vue';
+    import Team from '@/00_components/Team.vue';
 
     export default {
         data () {
@@ -21,7 +23,9 @@
             }
         },
         components: {
-            TimelineGlobal, Reference
+            TimelineGlobal,
+            Reference,
+            Team
         },
         computed: {
             ...mapGetters(['getStories'])
