@@ -5,9 +5,9 @@
                 <img class="ending__top" :src="topImage" alt="John triste">
                 <div class="ending__content">
                     <div class="ending__content__inner">
-                        <h2 class="ending__title heading--4">M'voilà plumé&nbsp;!</h2>
-                        <p class="teasing--4">« Vous devinerez pas ce qui vient de m’arriver, c’est l’huissier qu’a débarqué et qui m’a tout pris&nbsp;! J’avais accumulé 320 650 euros de dette faut dire !</p>
-                        <p class="teasing--4">Eh oui, digitaliser sa ferme, c’est pas donné et t’as intérêt à faire des choix stratégiques si tu veux pas qu’la technologie te mette plus dans le fumier qu’elle ne t’en sorte&nbsp;!&nbsp;»</p>
+                        <h2 class="ending__title heading--4">I'm penniless&nbsp;!</h2>
+                        <p class="teasing--4">«&nbsp;Y’all’ll never guess what bloody happened to me: the bailiff showed up in me farm and took everything! Well, i did accumulate a slight sum: <b>320,650 euros</b>&nbsp;!</p>
+                        <p class="teasing--4">Yeah, who would have thought that going digital for me farm will cost me so much. If you want to do this you have to make strategic choices if you don’t want the technology to put you in more crap that it should pull you from&nbsp;»</p>
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@ export default {
                 border: 3px solid $black;
                 border-radius: .5rem;
             }
-        } 
+        }
 
         &__top {
             padding: 0 4rem;

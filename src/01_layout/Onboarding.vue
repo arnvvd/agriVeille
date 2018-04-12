@@ -4,10 +4,10 @@
             <div class="onboarding__wrapper">
                 <div class="onboarding__content">
                     <div class="onboarding__content__inner">
-                        <h2 class="onboarding__title heading--4">Bien l'bonjour à toi, visiteur de l’internet&nbsp;!</h2>
-                        <p class="teasing--4">Moi c’est John, 52 ans, originaire d’Irlande. V’là 3 ans que j’ai quitté ma bourgade natale pour v'nir m’installer en France près de Beauvais et devenir agriculteur éleveur. Y a quelques mois de ça, plusieurs de mes connaissances et amis m’ont convaincu de digitaliser ma ferme. Un sacré chamboulement&nbsp;! C’est donc pour raconter mon expérience que j’ai créé ce p'tit blog qui te montrera en détails comment tout ça s’est goupillé.</p>
-                        <p class="teasing--4">Mais assez perdu d'temps&nbsp;! <b>Ferme ce pop-up, scrolle pour remplir la jauge de digitalisation et clique sur les éléments</b> qui apparaissent à l’écran pour accéder à mon journal de bord.</p>
-                        <button class="btn btn--onboarding btn--primary heading--3" v-on:click="setOnboarded">Commencer&nbsp;!</button>
+                        <h2 class="onboarding__title heading--4">Hello y'all&nbsp;!</h2>
+                        <p class="teasing--4">I'm John, 52, coming from Ireland. It's been 3 years since I settled in France to become a breeder farmer near Beauvais. A few months ago, my friends and relatives convinced me to digitalize me farm. What a great upheaval! That's how I decided to create this blog, for you to understand what happened to me. But enough chit-chat, let's get down to business!</p>
+                        <p class="teasing--4"><b>Close this pop-up, scroll up/down to fill the digitalization gauge and click on the elements popping on the screen to access my logbook.</b></p>
+                        <button class="btn btn--onboarding btn--primary heading--3" v-on:click="setOnboarded">Let's go&nbsp;!</button>
                     </div>
                 </div>
             </div>
@@ -62,8 +62,8 @@ export default {
                 border: 3px solid $black;
                 border-radius: .5rem;
             }
-        } 
-    } 
+        }
+    }
 
     .btn--onboarding {
         position: absolute;

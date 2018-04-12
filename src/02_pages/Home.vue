@@ -8,9 +8,7 @@
         <transition name="transition-ending">
             <ending v-if="getIsEnded"></ending>
         </transition>
-        <div class="home__category heading--8">
-            {{getCurrentStory.title}}
-        </div> 
+        <router-link class="home__category heading--8" :to="{name: 'article', params: { storySlug: getCurrentStory.slug }}">{{getCurrentStory.title}}</router-link>
     </div>
 </template>
 
@@ -90,13 +88,13 @@ export default {
         if (this.getIsOnboarded) {
             this.unbindEvents();
         }
-    },  
+    },
     watch: {
         getIsOnboarded : function(val) {
             if (val) {
                 this.bindEvents();
             }
-        } 
+        }
     }
 }
 </script>
@@ -119,7 +117,7 @@ export default {
             transform: translateX(-50%);
             background-color: #A5A39F;
             border: 3px solid #000;
-            border-radius: 10rem;   
+            border-radius: 10rem;
             text-transform: uppercase;
             z-index: 0;
 
@@ -133,7 +131,7 @@ export default {
                 height: calc(100% - .6rem);
                 background-color: #C9C57A;
                 transform: translate(-50%, -50%);
-                border-radius: 10rem;   
+                border-radius: 10rem;
                 z-index: -1;
             }
         }

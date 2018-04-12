@@ -76,6 +76,7 @@
             bottom: 50%;
             transform: translateY(50%);
             margin: 0;
+            font-weight: bold;
         }
 
         &__end {
@@ -84,6 +85,7 @@
             bottom: 50%;
             transform: translateY(50%);
             margin: 0;
+            font-weight: bold;
         }
 
         &__sections {

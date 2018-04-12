@@ -1,14 +1,14 @@
 <template>
     <div class="gauge">
         <div class="gauge__indicator">
-            <div class="gauge__indicator__value">&nbsp;</div> 
+            <div class="gauge__indicator__value">&nbsp;</div>
         </div>
         <div class="gauge__illu">
             <div class="gauge__illu__wrapper">
                 <img :src="image" alt="Loader example">
             </div>
         </div>
-        <p class="gauge__tuto heading--7">Scroll pour digitalisey&nbsp;!</p>
+        <p class="gauge__tuto heading--7">Scroll to digitalize&nbsp;!</p>
     </div>
 </template>
 
@@ -26,7 +26,7 @@
         },
         computed: {
             ...mapGetters([
-                'getDigitalValue', 
+                'getDigitalValue',
                 'getPercentValue'
             ])
         },
@@ -42,7 +42,7 @@
         mounted() {
             if (this.getDigitalValue) {
                 this.setHead(this.getDigitalValue);
-            } 
+            }
 
             if (this.getPercentValue) {
                 this.setGaugeValue(this.getPercentValue);
@@ -51,7 +51,7 @@
         watch: {
             getDigitalValue(val) {
                 this.setHead(val);
-            }, 
+            },
             getPercentValue(val) {
                 this.setGaugeValue(val);
             }
@@ -107,7 +107,7 @@
                 transform: translateY(100%);
                 transition: transform .8s $easeCustom;
             }
-        } 
+        }
 
         &__illu {
             position: absolute;
@@ -139,8 +139,8 @@
                     max-width: 15rem;
                     transform: translateX(-50%);
                 }
-            } 
-        } 
+            }
+        }
     }
 
 
