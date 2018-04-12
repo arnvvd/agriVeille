@@ -9,15 +9,14 @@
         cursor: pointer;
     }
 
-    
+
     &--primary {
         padding: 1.5rem 2.5rem;
-        background-color: $main-color;
         transition: padding .4s $easeCustom;
 
         &:hover {
             padding: 1.5rem 3.5rem;
             transition: padding .4s $easeCustom
-        } 
-    } 
+        }
+    }
 }

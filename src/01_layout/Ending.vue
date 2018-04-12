@@ -8,7 +8,7 @@
                         <h2 class="ending__title heading--4">I'm penniless&nbsp;!</h2>
                         <p class="teasing--4">«&nbsp;Y’all’ll never guess what bloody happened to me: the bailiff showed up in me farm and took everything! Well, i did accumulate a slight sum: <b>320,650 euros</b>&nbsp;!</p>
                         <p class="teasing--4">Yeah, who would have thought that going digital for me farm will cost me so much. If you want to do this you have to make strategic choices if you don’t want the technology to put you in more crap that it should pull you from&nbsp;»</p>
-                        <router-link class="btn btn--onboarding btn--primary heading--3":to="{name: 'conclusion'}">
+                        <router-link class="btn btn--primary heading--3 btn--ending" :to="{name: 'conclusion'}">
                             Read the ending
                          </router-link>
                     </div>
@@ -95,14 +95,14 @@ export default {
             transform: translateY(1rem);
         }
 
-        
+
     }
 
-      .btn--onboarding {
+      .btn--ending {
         position: absolute;
         bottom: 1rem;
         left: 50%;
-        border: 3px solid $black;
+        border: 3px solid $black !important;
         background-color: $white;
         transform: translate(-50%, 50%);
     }

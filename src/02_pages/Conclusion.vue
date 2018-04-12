@@ -16,10 +16,10 @@
                             <section class="article__section">
                                 <h2 class="article__section__title heading--2">Well, well, well ...</h2>
                                 <p class="article__section__published teasing--3">Published in Prison by John</p>
-                                <p class="article__section__content teasing--1">Y’all’ll never guess what bloody happened to me: the bailiff showed up in me farm and took everything! Well, i did accumulate a slight sum: 320,650 euros! Yeah, who would have thought that going digital for me farm will cost me so much. If you want to do this you have to make strategic choices if you don’t want the technology to put you in more crap that it should pull you from. For example when i think about the drone, well it didn’t help me to save more money than i actually spent to map the crops… And actually i should say that there is a point where it started to be a hell of a job taking care of every fricking machine, won’t talk to you about me headaches! I was looking more after me phone than me beasts actually. 
-Plus there’s the eventual breakdowns, technical issues and understanding who everything works. 
-Even though i sound pissed because i just lost everything i had, i have to say that If i was able to control meself and not buy everthing i saw it would have a been a bloody good help this technology. Just to interview people, if you tell them that they won’t have to clean up shit, it’s a very good argument. 
-And also, if i bought so many things it’s because i wanted to support french startups in the agro tech buisness which is thriving. 
+                                <p class="article__section__content teasing--1">Y’all’ll never guess what bloody happened to me: the bailiff showed up in me farm and took everything! Well, i did accumulate a slight sum: 320,650 euros! Yeah, who would have thought that going digital for me farm will cost me so much. If you want to do this you have to make strategic choices if you don’t want the technology to put you in more crap that it should pull you from. For example when i think about the drone, well it didn’t help me to save more money than i actually spent to map the crops… And actually i should say that there is a point where it started to be a hell of a job taking care of every fricking machine, won’t talk to you about me headaches! I was looking more after me phone than me beasts actually.
+Plus there’s the eventual breakdowns, technical issues and understanding who everything works.
+Even though i sound pissed because i just lost everything i had, i have to say that If i was able to control meself and not buy everthing i saw it would have a been a bloody good help this technology. Just to interview people, if you tell them that they won’t have to clean up shit, it’s a very good argument.
+And also, if i bought so many things it’s because i wanted to support french startups in the agro tech buisness which is thriving.
 Funny thing that people thing that farms and even farmers don’t know anything about connected objects with everything that’s coming up for us lately. Maybe that’s because of me accent or me look, uh? ;)
 
 </p>
@@ -73,7 +73,7 @@ Funny thing that people thing that farms and even farmers don’t know anything 
                 return this.getStoryBySlug(this.$route.params.storySlug);
             }
         },
-        updated() { 
+        updated() {
             this.initScrollClasses();
         },
         mounted() {
@@ -90,7 +90,6 @@ Funny thing that people thing that farms and even farmers don’t know anything 
 
     .article {
         height: 100vh;
-        background-color: rgba(248, 203, 93, 0.3);
         &__header {
             background-color: $main-color;
         }
@@ -179,7 +178,7 @@ Funny thing that people thing that farms and even farmers don’t know anything 
                 text-transform: uppercase;
             }
             &__published {
-                margin: 0; 
+                margin: 0;
             }
 
             &__list {
@@ -206,5 +205,5 @@ Funny thing that people thing that farms and even farmers don’t know anything 
                 }
             }
         }
-    } 
+    }
 </style>
