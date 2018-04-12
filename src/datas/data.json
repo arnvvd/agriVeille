@@ -7,8 +7,8 @@
                 {
                     "source": {
                         "title": "Wireless IoT Devices in Agriculture Reached 17 million",
-                        "media": "Nom du média / site de référence",
-                        "mediaLink": "#",
+                        "media": "Talk IoT",
+                        "mediaLink": "https://talkiot.co.za",
                         "link": "https://talkiot.co.za/2017/11/30/wireless-iot-devices-agriculture-reached-17-million/"
                     },
                     "date": "30/11/2017",
@@ -17,8 +17,8 @@
                 },
                 {   "source": {
                         "title": "Quatre nouveaux capteurs pour l’agriculture conçus en un week-end",
-                        "media": "Nom du média / site de référence",
-                        "mediaLink": "#",
+                        "media": "Terre-net",
+                        "mediaLink": "https://www.terre-net.fr",
                         "link": "https://www.terre-net.fr/materiel-agricole/reportage/article/4-nouveaux-capteurs-pour-l-agriculture-concus-en-un-week-end-213-132839.html"
                 },
                     "date": "04/12/2017",
@@ -28,8 +28,8 @@
                 {
                     "source": {
                         "title": "Des robots pour réduire la pénibilité des travaux agricoles présentés à Toulouse",
-                        "media": "Nom du média / site de référence",
-                        "mediaLink": "#",
+                        "media": "France 3",
+                        "mediaLink": "https://france3-regions.francetvinfo.fr",
                         "link": "https://france3-regions.francetvinfo.fr/occitanie/haute-garonne/toulouse/robots-reduire-penibilite-travaux-agricoles-presentes-toulouse-1378831.html"
                     },
                     "date": "06/12/2017",
@@ -39,8 +39,8 @@
                 {
                     "source": {
                         "title": "Agriculture startups turn to AI, IoT to boost production",
-                        "media": "Nom du média / site de référence",
-                        "mediaLink": "#",
+                        "media": "Financial Express",
+                        "mediaLink": "http://www.financialexpress.com",
                         "link": "http://www.financialexpress.com/industry/agriculture-startups-turn-to-ai-iot-to-boost-production/971429/"
                     },
                     "date": "13/12/2017",
@@ -50,8 +50,8 @@
                 {
                     "source": {
                         "title": "L’Agtu de février 2018 !",
-                        "media": "Nom du média / site de référence",
-                        "mediaLink": "#",
+                        "media": "La Ferme Digitale",
+                        "mediaLink": "http://www.lafermedigitale.fr",
                         "link": "http://www.lafermedigitale.fr/newsletter-lagtu-de-fevrier-2018-2/"
                     },
                     "date": "14/02/2018",
@@ -61,8 +61,8 @@
                 {
                     "source": {
                         "title": "Soon you’ll be able to ask an agrirobot: How do you like them apples?",
-                        "media": "Nom du média / site de référence",
-                        "mediaLink": "#",
+                        "media": "The New Food Economy",
+                        "mediaLink": "https://newfoodeconomy.org",
                         "link": "https://newfoodeconomy.org/ai-farm-abundant-robotics-bext360/"
                     },
                     "date": "20/03/2018",
@@ -80,8 +80,8 @@
                 {
                     "source": {
                     "title": "E-agriculture: Copeeks, la start-up de Lannion, sera présente au Space",
-                    "media": "Nom du média / site de référence",
-                    "mediaLink": "#",
+                    "media": "Ouest France",
+                    "mediaLink": "https://www.ouest-france.fr",
                     "link": "https://www.ouest-france.fr/bretagne/lannion-22300/e-agriculture-copeeks-la-start-de-lannion-sera-presente-au-space-5227437"
                 },
                     "date": "07/09/2017",
@@ -90,8 +90,8 @@
                 },
                 {   "source": {
                     "title": "Kerhis : « On l’oublie souvent, mais le monde agricole a été connecté bien avant les consommateurs »",
-                    "media": "Nom du média / site de référence",
-                    "mediaLink": "#",
+                    "media": "Bretagne Bretons",
+                    "mediaLink": "http://www.bretagne-bretons.fr/",
                     "link": "http://www.bretagne-bretons.fr/kerhis-on-loublie-souvent-monde-agricole-a-ete-connecte-bien-consommateurs/"
                 },
                     "date": "01/12/2017",
@@ -101,8 +101,8 @@
                 {
                     "source": {
                         "title": "Les énergies renouvelables, opportunité de revenus pour les agriculteurs",
-                        "media": "Nom du média / site de référence",
-                        "mediaLink": "#",
+                        "media": "Web-agri",
+                        "mediaLink": "http://www.web-agri.fr",
                         "link": "http://www.web-agri.fr/actualite-agricole/economie-social/article/les-energies-renouvelables-opportunite-de-revenus-pour-les-agriculteurs-1142-135363.html"
                     },
                     "date": "22/02/2018",
@@ -112,8 +112,8 @@
                 {
                     "source": {
                         "title": "[FW Radar] Sencrop, la station connectée pour les agriculteurs",
-                        "media": "Nom du média / site de référence",
-                        "mediaLink": "#",
+                        "media": "FrenchWeb.fr",
+                        "mediaLink": "https://www.frenchweb.fr",
                         "link": "https://www.frenchweb.fr/fw-radar-sencrop-la-station-connectee-pour-les-agriculteurs/317974"
                     },
                     "date": "28/02/2018",
@@ -123,8 +123,8 @@
                 {
                     "source": {
                         "title": "Salon de l’agriculture : la méthanisation en soutien des exploitations",
-                        "media": "Nom du média / site de référence",
-                        "mediaLink": "#",
+                        "media": "Sciences et Avenir",
+                        "mediaLink": "https://www.sciencesetavenir.fr",
                         "link": "https://www.sciencesetavenir.fr/nature-environnement/agriculture/salon-de-l-agriculture-la-methanisation-en-soutien-des-exploitations_121695"
                     },
                     "date": "02/03/2018",
@@ -141,6 +141,8 @@
                 {
                     "source": {
                     "title": "PROCLEANER X100 : LE ROBOT DE LAVAGE POUR BÂTIMENT D’ÉLEVAGE",
+                    "media": "Tech Élevage",
+                    "mediaLink": "http://www.techelevage.fr/",
                     "link": "http://www.techelevage.fr/procleaner-x100-robot-de-nettoyage-batiment-delevage/"
                 },
                     "date": "04/09/2017",
@@ -150,6 +152,8 @@
                 {
                     "source": {
                     "title": "Agriculture : les robots veillent au gain",
+                    "media": "Libération",
+                    "mediaLink": "http://www.liberation.fr",
                     "link": "http://www.liberation.fr/futurs/2017/09/18/agriculture-les-robots-veillent-au-gain_1597264"
                 },
                     "date": "18/09/2017",
@@ -159,6 +163,8 @@
                 {
                     "source": {
                     "title": "Spoutnic prend soin des aviculteurs et de leur porte-monnaie",
+                    "media": "Agriculture connectée Magazine",
+                    "mediaLink": "http://www.ac-mag.fr",
                     "link": "http://www.ac-mag.fr/robotique-agricole/93-spoutnic-prend-soin-des-aviculteurs-et-de-leur-porte-monnaie"
                 },
                     "date": "10/10/2017",
@@ -168,6 +174,8 @@
                 {
                     "source": {
                     "title": "Octopus Robots : roule ma poule",
+                    "media": "Entreprendre.fr",
+                    "mediaLink": "http://www.entreprendre.fr",
                     "link": "http://www.entreprendre.fr/octopus-robots-poule-olivier-somville"
                 },
                     "date": "04/01/2018",
@@ -177,6 +185,8 @@
                 {
                     "source": {
                     "title": "Naïo Technologies, Le Fleuron De L’AgTech à La Française",
+                    "media": "Forbes",
+                    "mediaLink": "https://www.forbes.fr",
                     "link": "https://www.forbes.fr/entrepreneurs/naio-technologies-le-fleuron-de-l-agtech-a-la-francaise/"
                 },
                     "date": "12/01/2018",
@@ -186,6 +196,8 @@
                 {
                     "source": {
                     "title": "Farm Robotics are Taking a Giant Automated Leap Forward",
+                    "media": "MachineDesign",
+                    "mediaLink": "http://www.machinedesign.com",
                     "link": "http://www.machinedesign.com/motion-control/farm-robotics-are-taking-giant-automated-leap-forward"
                 },
                     "date": "26/01/2018",
@@ -195,6 +207,8 @@
                 {
                     "source": {
                     "title": "Soon you’ll be able to ask an agrirobot: How do you like them apples?",
+                    "media": "The New Food Economy",
+                    "mediaLink": "https://newfoodeconomy.org",
                     "link": "https://newfoodeconomy.org/ai-farm-abundant-robotics-bext360/"
                 },
                     "date": "20/02/2018",
@@ -204,6 +218,8 @@
                 {
                     "source": {
                     "title": "Parrot lance un drone pour l’agriculture",
+                    "media": "Le Monde",
+                    "mediaLink": "http://www.lemonde.fr",
                     "link": "http://www.lemonde.fr/la-foire-du-drone/article/2018/02/22/parrot-lance-un-drone-pour-l-agriculture_5260936_5037916.html"
                 },
                     "date": "22/02/2018",
@@ -220,6 +236,8 @@
                 {
                     "source": {
                     "title": "Coho crée l'écurie connectée",
+                    "media": "L'essor",
+                    "mediaLink": "http://lessor38.fr/",
                     "link": "http://lessor38.fr/coho-un-boitier-pour-ameliorer-le-bien-etre-des-chevaux-20142.html"
                 },
                     "date": "02/10/2017",
@@ -229,6 +247,8 @@
                 {
                     "source": {
                     "title": "Cochon connecté : une solution IoT pour la santé animalière",
+                    "media": "ObjetConnecte.com",
+                    "mediaLink": "https://www.objetconnecte.com",
                     "link": "https://www.objetconnecte.com/cochon-connecte-elevage/"
                 },
                     "date": "17/11/2017",
@@ -238,6 +258,8 @@
                 {
                     "source": {
                     "title": "Cows going online in NZ paddocks",
+                    "media": "nzherald.co.nz",
+                    "mediaLink": "http://www.nzherald.co.nz",
                     "link": "http://www.nzherald.co.nz/business/news/article.cfm?c_id=3&objectid=11951232"
                 },
                     "date": "03/12/2017",
@@ -247,6 +269,8 @@
                 {
                     "source": {
                     "title": "Insurtech giant ZhongAn plans to use facial recognition, blockchain to monitor chickens",
+                    "media": "South China Morning Post",
+                    "mediaLink": "http://www.scmp.com/",
                     "link": "http://www.scmp.com/business/companies/article/2123567/blockchain-and-facial-recognition-zhongan-techs-recipe-changing"
                 },
                     "date": "10/12/2017",
@@ -256,6 +280,8 @@
                 {
                     "source": {
                     "title": "Meet the “connected cow”",
+                    "media": "Financial Times",
+                    "mediaLink": "https://www.ft.com",
                     "link": "https://www.ft.com/content/2db7e742-7204-11e7-93ff-99f383b09ff9"
                 },
                     "date": "20/12/2017",
@@ -272,6 +298,8 @@
                 {
                     "source": {
                     "title": "Silence, ça grimpe : l'agriculture urbaine prend son envol",
+                    "media": "Grazia",
+                    "mediaLink": "https://www.grazia.fr",
                     "link": "https://www.grazia.fr/news-et-societe/societe/silence-ca-grimpe-l-agriculture-urbaine-prend-son-envol-866601"
                 },
                     "date": "09/09/2017",
@@ -281,6 +309,8 @@
                 {
                     "source": {
                     "title": "Gaspillage alimentaire : Quand l’IoT et la blockchain aident les industriels",
+                    "media": "ObjetConnecte.com",
+                    "mediaLink": "https://www.objetconnecte.com",
                     "link": "https://www.objetconnecte.com/gaspillage-alimentaire-iot-blockchain/"
                 },
                     "date": "23/11/2017",
@@ -290,6 +320,8 @@
                 {
                     "source": {
                     "title": "Une betterave connectée pour affiner le réglage de la machine",
+                    "media": "La France agricole",
+                    "mediaLink": "http://www.lafranceagricole.fr",
                     "link": "http://www.lafranceagricole.fr/videos/recolte-une-betterave-connectee-pour-affiner-le-reglage-de-la-machine-1,2,1301089223.html"
                 },
                     "date": "28/11/2017",
@@ -299,6 +331,8 @@
                 {
                     "source": {
                     "title": "Ce Normand est pionnier de l’agriculture urbaine à New York",
+                    "media": "Ouest France",
+                    "mediaLink": "https://www.ouest-france.fr",
                     "link": "https://www.ouest-france.fr/normandie/ce-normand-est-pionnier-de-l-agriculture-urbaine-new-york-5441558"
                 },
                     "date": "12/12/2017",
@@ -308,6 +342,8 @@
                 {
                     "source": {
                     "title": "Ce Normand est pionnier de l’agriculture urbaine à New York",
+                    "media": "Alliancy",
+                    "mediaLink": "https://www.alliancy.fr",
                     "link": "https://www.alliancy.fr/chroniques/internet-objets-mtom/2018/03/01/les-serres-connectees-un-melange-daquaponie-et-dalgorithme"
                 },
                     "date": "01/03/2018",
