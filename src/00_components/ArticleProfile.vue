@@ -5,8 +5,9 @@
             <img v-if="image" :src="image" alt="Loader example">
         </div>
         <p class="article__profile__desc teasing--2">
-            Moi c’est John, 52 ans, originaire d’Irlande et agriculteur éleveur en Beauce. Découvre comment j’ai digitalisé ma ferme vindieu.
+            I'm John, 52, from Ireland and I'm a connected farmer in Beauce. Discover how I digitized my farm.
         </p>
+
     </aside>
 </template>
 
@@ -21,16 +22,20 @@ import { mapActions, mapGetters } from 'vuex';
 export default {
     data () {
         return {
-            image: ""
+            image: "",
         }
     },
     computed: {
         ...mapGetters([
-            'getDigitalValue'
+            'getDigitalValue',
+            'getCurrentStory'
         ])
     },
     mounted() {
         this.image = getHead(this.getDigitalValue);
+        if (this.pdf = getPDF(this.getCurrentStory.id)) {
+            this.pdf = getPDF(this.getCurrentStory.id)
+        }
         const $el = this.$el;
         const $parent = this.$el.parentNode;
         new Sticky($parent, {
@@ -40,14 +45,19 @@ export default {
             marginTop: 0,
             marginBottom: 40
         });
+    },
+    watch: {
+        getCurrentStory(val) {
+            this.pdf = getPDF(this.getCurrentStory.id)
+        }
     }
 }
 </script>
 
 <style lang="scss">
-    @import "~styles/main.scss"; 
-    
-    .article { 
+    @import "~styles/main.scss";
+
+    .article {
 
         &__profile {
             position: absolute;

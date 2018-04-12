@@ -111,7 +111,7 @@ export default {
             display: inline-block;
             vertical-align: top;
             position: fixed;
-            bottom: 3rem;
+            bottom: 5rem;
             left: 50%;
             padding: 1rem 3rem;
             transform: translateX(-50%);
