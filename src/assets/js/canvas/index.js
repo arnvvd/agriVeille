@@ -54,7 +54,7 @@ export default class Canvas {
             this.pop.particlesEmitter.update(DELTA_TIME*0.001)
         }
         this.timeSpent += DELTA_TIME
-        //this.scene.stage.y = Math.sin(this.timeSpent/500.)*4.
+        this.scene.stage.y += Math.sin(this.timeSpent/700.)*.5 
     }
 
 

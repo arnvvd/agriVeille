@@ -29,7 +29,7 @@ export default {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #f8cb5d;
+        background-color: #fdf0d1;
         overflow: hidden;
         z-index: 100;
 

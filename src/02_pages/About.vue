@@ -32,7 +32,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
     .about {
-        background-color: #e6e5c3; //green
+        background-color: #fdf0d1; //green
         min-height: 100vh;
         display: flex;
         flex-direction: column;
