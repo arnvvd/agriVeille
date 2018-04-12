@@ -8,7 +8,7 @@
                             <path d="M36.31,5.66,31.43,0,1.3,26a3.74,3.74,0,0,0,0,5.66l30.14,26L36.32,52,13.79,32.55h85.5V25.08H13.79Z"/>
                         </svg>
                     </span>
-                    <span>Retour</span>
+                    <span>Back</span>
                 </router-link>
             </li>
             <li class="nav__item nav__item--right heading--6" >
