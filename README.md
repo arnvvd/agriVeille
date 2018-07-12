@@ -32,5 +32,7 @@ npm run build
 ## Meta
 
 Nikita Skargovskii – [@nskargovskii](https://twitter.com/nskargovskii) – [https://github.com/nikitaska](https://github.com/nikitaska/)
+
 Nathalie Zhang – [https://github.com/nathaliezhang](https://github.com/nathaliezhang/)
+
 Arnaud Pinot – [@PinotArnaud](https://twitter.com/PinotArnaud) – [https://github.com/arnvvd](https://github.com/arnvvd/)
